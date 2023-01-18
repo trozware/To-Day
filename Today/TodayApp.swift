@@ -40,21 +40,28 @@ struct TodayApp: App {
       }
       .disabled(allIncomplete)
 
-      Toggle("Completed at End", isOn: $sortCompletedToEnd)
-
       Divider()
 
       Button("Edit Todos…") {
         openWindow(id: "edit_todos")
         NSApp.activate(ignoringOtherApps: true)
       }
+      
+      Toggle("Completed at End", isOn: $sortCompletedToEnd)
 
       Toggle("Launch on Login", isOn: $launchOnLogin)
 
-      Divider()
+      Group {
+        Divider()
 
-      Button("Quit To-Day") {
-        NSApp.terminate(nil)
+        Button("About To-Day…") {
+          openWindow(id: "about_today")
+          NSApp.activate(ignoringOtherApps: true)
+        }
+
+        Button("Quit To-Day") {
+          NSApp.terminate(nil)
+        }
       }
     } label: {
       menuTitle
@@ -65,6 +72,11 @@ struct TodayApp: App {
 
     Window("Edit Todos", id: "edit_todos") {
       EditView(todos: $todos)
+    }
+    .defaultSize(width: 350, height: 400)
+
+    Window("About To-Day", id: "about_today") {
+      AboutView()
     }
     .defaultSize(width: 350, height: 400)
   }

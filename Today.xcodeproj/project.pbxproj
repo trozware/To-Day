@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		262623E52977A8B6001F9610 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262623E42977A8B6001F9610 /* EditView.swift */; };
+		262623E72977C371001F9610 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262623E62977C371001F9610 /* AboutView.swift */; };
 		2675DBE82974BA6500492B03 /* TodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2675DBE72974BA6500492B03 /* TodayApp.swift */; };
 		2675DBEC2974BA6500492B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEB2974BA6500492B03 /* Assets.xcassets */; };
 		2675DBEF2974BA6500492B03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		262623E42977A8B6001F9610 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		262623E62977C371001F9610 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		2675DBE42974BA6500492B03 /* To-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2675DBE72974BA6500492B03 /* TodayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayApp.swift; sourceTree = "<group>"; };
 		2675DBEB2974BA6500492B03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				2675DBE72974BA6500492B03 /* TodayApp.swift */,
 				262623E42977A8B6001F9610 /* EditView.swift */,
+				262623E62977C371001F9610 /* AboutView.swift */,
 				26F2268B29762D2A00EDBEF3 /* Todo.swift */,
 				26F2268D2976347000EDBEF3 /* DataStore.swift */,
 				2675DBEB2974BA6500492B03 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				26F2268E2976347000EDBEF3 /* DataStore.swift in Sources */,
 				26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */,
 				262623E52977A8B6001F9610 /* EditView.swift in Sources */,
+				262623E72977C371001F9610 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
