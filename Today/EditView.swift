@@ -5,12 +5,16 @@
 //  Created by Sarah Reichelt on 18/1/2023.
 //
 
+//  TODO: can the list scroll to end for editing?
+//  TODO: editing text jumps cursor to end of line
+
 import SwiftUI
 
 struct EditView: View {
   @Binding var todos: [Todo]
   @State private var newTitle = ""
   @State private var dataStore = DataStore()
+  @FocusState var editFieldHasFocus: Bool
 
   var body: some View {
     List {
@@ -47,6 +51,7 @@ struct EditView: View {
       }
 
       TextField("Enter new todo and press Return.", text: $newTitle)
+        .focused($editFieldHasFocus)
         .onSubmit() {
           // only works with Return
           if !newTitle.isEmpty {
@@ -54,6 +59,7 @@ struct EditView: View {
             todos.append(newTodo)
             newTitle = ""
             saveChanges()
+            editFieldHasFocus = true
           }
         }
 
@@ -62,7 +68,11 @@ struct EditView: View {
     .listStyle(.inset(alternatesRowBackgrounds: true))
     .frame(minWidth: 350)
     .environment(\.defaultMinListRowHeight, 30)
+    .onAppear {
+      editFieldHasFocus = true
+    }
   }
+
 
   func deleteTodo(_ todo: Todo) {
     todos.removeAll {
