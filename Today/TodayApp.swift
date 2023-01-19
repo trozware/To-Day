@@ -7,12 +7,17 @@
 
 import SwiftUI
 import ServiceManagement
+import Sparkle
 
 @main
 struct TodayApp: App {
   @State private var dataStore = DataStore()
   @State private var todos: [Todo] = DataStore().loadTodos()
   @State private var launchOnLogin = SMAppService.mainApp.status == .enabled
+  private let updaterController: SPUStandardUpdaterController = SPUStandardUpdaterController(
+    startingUpdater: true,
+    updaterDelegate: nil,
+    userDriverDelegate: nil)
 
   @AppStorage("sortCompletedToEnd") var sortCompletedToEnd = true
 
@@ -54,6 +59,8 @@ struct TodayApp: App {
       Group {
         Divider()
 
+        CheckForUpdatesView(updater: updaterController.updater)
+        
         Button("About To-Day…") {
           openWindow(id: "about_today")
           NSApp.activate(ignoringOtherApps: true)
