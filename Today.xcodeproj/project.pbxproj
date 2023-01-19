@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2604F4E42978D9F40036A5BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2604F4E52978DFBF0036A5BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		262623E42977A8B6001F9610 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		262623E62977C371001F9610 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		2675DBE42974BA6500492B03 /* To-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				2604F4E42978D9F40036A5BA /* README.md */,
+				2604F4E52978DFBF0036A5BA /* .gitignore */,
 				26D8239C2978CD120051859E /* To-Day-Info.plist */,
 				2675DBE62974BA6500492B03 /* Today */,
 				2675DBE52974BA6500492B03 /* Products */,
