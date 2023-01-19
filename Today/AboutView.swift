@@ -47,11 +47,18 @@ struct AboutView: View {
             .frame(height: 60)
         }
         .buttonStyle(.plain)
+
+        Spacer()
+
+        Text(versionAndBuild())
+          .font(.headline)
+          .padding(.bottom, 0)
       }
+
     }
     .font(.title3)
     .multilineTextAlignment(.center)
-    .frame(width: 500, height: 600)
+    .frame(width: 500, height: 630)
     .padding()
   }
 
@@ -69,6 +76,17 @@ struct AboutView: View {
       fatalError("Bad Mastodon URL!")
     }
     NSWorkspace.shared.open(url)
+  }
+
+  func versionAndBuild() -> String {
+    if
+      let bundleInfo = Bundle.main.infoDictionary,
+      let version = bundleInfo["CFBundleShortVersionString"] as?
+        String,
+      let build = bundleInfo["CFBundleVersion"] as? String {
+      return "To-Day: v\(version) (\(build))"
+    }
+    return " "
   }
 }
 

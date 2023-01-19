@@ -4,19 +4,11 @@
         <title>To-Day</title>
         <item>
             <title>1.0</title>
-            <pubDate>Thu, 19 Jan 2023 12:08:45 +1000</pubDate>
-            <sparkle:version>2</sparkle:version>
+            <pubDate>Thu, 19 Jan 2023 15:57:44 +1000</pubDate>
+            <sparkle:version>3</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day%20converted.dmg" length="11256928" type="application/octet-stream" sparkle:edSignature="bBEWnelEJWk4IyUPCirsaa/mqPMsxIaObGiVTKK7/rT5vJccoJU4w+iqSWpwNe7XoshECjyVNayVsBqvQoZHAw=="/>
-        </item>
-        <item>
-            <title>1.0</title>
-            <pubDate>Thu, 19 Jan 2023 11:44:59 +1000</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="To-Day.dmg" length="11494496" type="application/octet-stream" sparkle:edSignature="hvRo+k5ESKEfqfn8fZBbv7PC7Ksa9B1lPZYRvqyX6su8DSqPqoNUxi7tu/bGhPZKOs3zU+LHcl0tz0jTGRIaCw=="/>
+            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="11678939" type="application/octet-stream" sparkle:edSignature="IiPtRSjiL+yoUeRYSfeXn1y888daJwsyejGsJChG369QTgWCYX6v2EpJQHRPJ5kFYa06Ax5ubEtiV4lUQ1ZVBA=="/>
         </item>
     </channel>
 </rss>
