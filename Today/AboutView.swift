@@ -14,11 +14,6 @@ struct AboutView: View {
         .resizable()
         .aspectRatio(contentMode: .fit)
         .frame(height: 150)
-        .overlay(
-          Text("To-Day").font(.title).bold()
-            .foregroundColor(.white)
-            .offset(y: -40)
-        )
 
       Text("I wanted a very simple menubar app that showed a list of items that I could check off over the day. Nothing long term, just day-by-day.")
 
