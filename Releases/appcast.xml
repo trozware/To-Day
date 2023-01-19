@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>To-Day</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Thu, 19 Jan 2023 11:44:59 +1000</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="To-Day.dmg" length="11494496" type="application/octet-stream" sparkle:edSignature="hvRo+k5ESKEfqfn8fZBbv7PC7Ksa9B1lPZYRvqyX6su8DSqPqoNUxi7tu/bGhPZKOs3zU+LHcl0tz0jTGRIaCw=="/>
+        </item>
+    </channel>
+</rss>
