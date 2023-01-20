@@ -5,7 +5,7 @@
 //  Created by Sarah Reichelt on 18/1/2023.
 //
 
-//  TODO: keyboard shortcuts - requires list items to be selectable
+//  TODO: keyboard shortcuts - requires list items to be selectable somehow
 
 import SwiftUI
 
@@ -15,7 +15,7 @@ struct EditView: View {
   @FocusState var editFieldHasFocus: Bool
 
   var body: some View {
-    List {
+    List() {
       ForEach($appState.todos) { $todo in
         HStack {
           TextField("", text: $todo.title)

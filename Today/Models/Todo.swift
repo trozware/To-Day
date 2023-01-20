@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Todo: Identifiable, Equatable, Codable {
+struct Todo: Identifiable, Equatable, Hashable, Codable {
   var id: Int
   var title: String
   var isComplete = false
