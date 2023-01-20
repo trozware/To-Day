@@ -12,6 +12,7 @@
 		2675DBE82974BA6500492B03 /* TodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2675DBE72974BA6500492B03 /* TodayApp.swift */; };
 		2675DBEC2974BA6500492B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEB2974BA6500492B03 /* Assets.xcassets */; };
 		2675DBEF2974BA6500492B03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */; };
+		26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC9AF0297A100700E19AA3 /* AppState.swift */; };
 		26D823992978CA960051859E /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 26D823982978CA960051859E /* Sparkle */; };
 		26D8239B2978CAE70051859E /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8239A2978CAE70051859E /* Updater.swift */; };
 		26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F2268B29762D2A00EDBEF3 /* Todo.swift */; };
@@ -28,6 +29,7 @@
 		2675DBEB2974BA6500492B03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2675DBF02974BA6500492B03 /* Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Today.entitlements; sourceTree = "<group>"; };
+		26BC9AF0297A100700E19AA3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		26D8239A2978CAE70051859E /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		26D8239C2978CD120051859E /* To-Day-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "To-Day-Info.plist"; sourceTree = "<group>"; };
 		26F2268B29762D2A00EDBEF3 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -49,10 +51,10 @@
 		2675DBDB2974BA6500492B03 = {
 			isa = PBXGroup;
 			children = (
+				2675DBE62974BA6500492B03 /* Today */,
 				2604F4E42978D9F40036A5BA /* README.md */,
 				2604F4E52978DFBF0036A5BA /* .gitignore */,
 				26D8239C2978CD120051859E /* To-Day-Info.plist */,
-				2675DBE62974BA6500492B03 /* Today */,
 				2675DBE52974BA6500492B03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,8 +73,7 @@
 				2675DBE72974BA6500492B03 /* TodayApp.swift */,
 				262623E42977A8B6001F9610 /* EditView.swift */,
 				262623E62977C371001F9610 /* AboutView.swift */,
-				26F2268B29762D2A00EDBEF3 /* Todo.swift */,
-				26F2268D2976347000EDBEF3 /* DataStore.swift */,
+				26BC9AF2297A100E00E19AA3 /* Models */,
 				26D8239A2978CAE70051859E /* Updater.swift */,
 				2675DBEB2974BA6500492B03 /* Assets.xcassets */,
 				2675DBF02974BA6500492B03 /* Today.entitlements */,
@@ -87,6 +88,16 @@
 				2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26BC9AF2297A100E00E19AA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26BC9AF0297A100700E19AA3 /* AppState.swift */,
+				26F2268B29762D2A00EDBEF3 /* Todo.swift */,
+				26F2268D2976347000EDBEF3 /* DataStore.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			files = (
 				2675DBE82974BA6500492B03 /* TodayApp.swift in Sources */,
 				26F2268E2976347000EDBEF3 /* DataStore.swift in Sources */,
+				26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */,
 				26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */,
 				262623E52977A8B6001F9610 /* EditView.swift in Sources */,
 				262623E72977C371001F9610 /* AboutView.swift in Sources */,
@@ -298,7 +310,7 @@
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Today/Preview Content\"";
 				DEVELOPMENT_TEAM = TC28MCLCFA;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -313,7 +325,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -329,7 +341,7 @@
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Today/Preview Content\"";
 				DEVELOPMENT_TEAM = TC28MCLCFA;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -344,7 +356,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

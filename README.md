@@ -14,6 +14,6 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 
 Things to fix:
 
-- [ ] Editing - SwiftUI jumps the insertion cursor to the end of the field when editing an existing todo.
+- [x] Editing - SwiftUI jumps the insertion cursor to the end of the field when editing an existing todo.
 - [ ] Keyboard shortcuts for editing, deleting and moving.
 

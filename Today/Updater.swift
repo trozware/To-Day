@@ -2,7 +2,7 @@
 //  Updater.swift
 //  To-Day
 //
-//  Created by Sarah Reichelt on 19/1/2023.
+//  Created by Sparkle on 19/1/2023.
 //
 
 import SwiftUI
