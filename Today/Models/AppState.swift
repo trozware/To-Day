@@ -96,6 +96,23 @@ extension AppState {
     saveData()
   }
 
+  func deleteAll() {
+    // TODO: ask for confirmation
+    let alert = NSAlert()
+    alert.alertStyle = .warning
+    alert.messageText = "Really delete all the todos?"
+    alert.addButton(withTitle: "Delete")
+    alert.addButton(withTitle: "Cancel")
+
+    NSApp.activate(ignoringOtherApps: true)
+
+    let response = alert.runModal()
+    if response == .alertFirstButtonReturn {
+      todos = []
+      saveData()
+    }
+  }
+
   func reassignIDs() {
     for todoIndex in 0 ..< todos.count {
       todos[todoIndex].id = todoIndex + 1
