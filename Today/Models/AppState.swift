@@ -126,7 +126,6 @@ extension AppState {
       $0.id == todo.id
     }
 
-
     if direction == .up {
       guard let todoIndex, todoIndex > 0 else {
         return

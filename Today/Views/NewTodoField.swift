@@ -15,6 +15,9 @@ struct NewTodoField: View {
   var body: some View {
     TextField("Enter new todo and press Return.", text: $newTitle)
       .focused($editFieldHasFocus)
+      .frame(maxWidth: .infinity)
+      .padding(.horizontal, -8)
+
       .onSubmit() {
         // only works with Return
         if !newTitle.isEmpty {
@@ -25,6 +28,14 @@ struct NewTodoField: View {
       }
       .onAppear {
         editFieldHasFocus = true
+      }
+      .onDisappear {
+        appState.todoBeingEdited = nil
+      }
+      .onChange(of: appState.todoBeingEdited) { newValue in
+        if newValue == nil {
+          editFieldHasFocus = true
+        }
       }
   }
 }

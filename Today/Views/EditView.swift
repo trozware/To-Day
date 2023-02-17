@@ -21,12 +21,13 @@ struct EditView: View {
 
         NewTodoField(appState: appState)
       }
+      .textFieldStyle(.roundedBorder)
       .listStyle(.inset(alternatesRowBackgrounds: true))
       .environment(\.defaultMinListRowHeight, 30)
 
       Spacer()
 
-      Text(appState.todoBeingEdited?.title ?? "Nothing being edited")
+      helpText
       
       HStack {
         Button(role: .destructive) {
@@ -54,6 +55,18 @@ struct EditView: View {
     }
   }
 
+  var helpText: Text {
+    let commandImg = Image(systemName: "command")
+    let arrowUpImg = Image(systemName: "arrow.up")
+    let arrowDownImg = Image(systemName: "arrow.down")
+
+    if let _ = appState.todoBeingEdited {
+      return Text("Use \(commandImg) \(arrowUpImg) or \(commandImg) \(arrowDownImg) to move the todo, \(commandImg) D to delete.")
+    } else {
+      return Text("Type and press Return, or click a todo to edit.")
+    }
+  }
+
   func monitorKeystrokes() {
     NSEvent.addLocalMonitorForEvents(matching: .keyUp) { event in
       guard let todo = appState.todoBeingEdited else {
@@ -67,7 +80,10 @@ struct EditView: View {
           appState.move(todo, direction: .up)
         case KeyCodes.downArrow:
           appState.move(todo, direction: .down)
+        case KeyCodes.dKey:
+          appState.deleteTodo(todo)
         default:
+          // print("command: \(keyCode)")
           break
         }
       }

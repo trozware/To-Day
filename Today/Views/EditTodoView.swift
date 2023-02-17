@@ -15,25 +15,27 @@ struct EditTodoView: View {
   var body: some View {
     HStack {
       TextField("", text: $todo.title)
+        .labelsHidden()
         .focused($editingTodo, equals: todo.id)
         .foregroundColor(editingTodo == todo.id ? .primary : .secondary)
+        .padding(.trailing, 10)
 
       Spacer()
 
       HStack(spacing: 20) {
-//        Button {
-//          appState.move(todo, direction: .up)
-//        } label: {
-//          Image(systemName: "arrow.up")
-//        }
-//        .disabled(todo.order == 1)
-//
-//        Button {
-//          appState.move(todo, direction: .down)
-//        } label: {
-//          Image(systemName: "arrow.down")
-//        }
-//        .disabled(todo.order == appState.todos.count)
+        //        Button {
+        //          appState.move(todo, direction: .up)
+        //        } label: {
+        //          Image(systemName: "arrow.up")
+        //        }
+        //        .disabled(todo.order == 1)
+        //
+        //        Button {
+        //          appState.move(todo, direction: .down)
+        //        } label: {
+        //          Image(systemName: "arrow.down")
+        //        }
+        //        .disabled(todo.order == appState.todos.count)
 
         Button {
           appState.deleteTodo(todo)
