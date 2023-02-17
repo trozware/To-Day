@@ -11,7 +11,10 @@ import SwiftUI
 
 class AppState: ObservableObject {
   var dataStore = DataStore()
+
   @Published var todos: [Todo] = DataStore().loadTodos()
+  @Published var todoBeingEdited: Todo?
+
   @AppStorage("sortCompletedToEnd") var sortCompletedToEnd = true
 }
 
@@ -97,7 +100,6 @@ extension AppState {
   }
 
   func deleteAll() {
-    // TODO: ask for confirmation
     let alert = NSAlert()
     alert.alertStyle = .warning
     alert.messageText = "Really delete all the todos?"

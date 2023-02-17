@@ -10,10 +10,12 @@ import SwiftUI
 struct EditTodoView: View {
   @ObservedObject var appState: AppState
   @Binding var todo: Todo
+  @FocusState var editingTodo: Bool
 
   var body: some View {
     HStack {
       TextField("", text: $todo.title)
+        .focused($editingTodo)
 
       Spacer()
 
@@ -46,6 +48,15 @@ struct EditTodoView: View {
           .tint(.green)
       }
       .buttonStyle(.plain)
+    }
+    .onChange(of: editingTodo) { newValue in    
+      if newValue {
+        appState.todoBeingEdited = todo
+      } else {
+        if appState.todoBeingEdited == todo {
+          appState.todoBeingEdited = nil
+        }
+      }
     }
   }
 }

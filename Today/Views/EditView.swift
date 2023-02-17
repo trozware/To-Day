@@ -26,6 +26,8 @@ struct EditView: View {
 
       Spacer()
 
+      Text(appState.todoBeingEdited?.title ?? "Nothing being edited")
+      
       HStack {
         Button(role: .destructive) {
           appState.deleteAll()
@@ -46,6 +48,31 @@ struct EditView: View {
       .padding([.horizontal, .bottom], 12)
     }
     .frame(minWidth: 350)
+    .onAppear(perform: monitorKeystrokes)
+    .onDisappear {
+      appState.todoBeingEdited = nil
+    }
+  }
+
+  func monitorKeystrokes() {
+    NSEvent.addLocalMonitorForEvents(matching: .keyUp) { event in
+      guard let todo = appState.todoBeingEdited else {
+        return event
+      }
+
+      if event.modifierFlags.contains(.command) {
+        let keyCode = event.keyCode
+        switch keyCode {
+        case KeyCodes.upArrow:
+          appState.move(todo, direction: "up")
+        case KeyCodes.downArrow:
+          appState.move(todo, direction: "down")
+        default:
+          print(keyCode)
+        }
+      }
+      return event
+    }
   }
 }
 
