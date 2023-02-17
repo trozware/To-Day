@@ -10,12 +10,12 @@ import SwiftUI
 struct EditTodoView: View {
   @ObservedObject var appState: AppState
   @Binding var todo: Todo
-  @FocusState var editingTodo: Bool
+  @FocusState var editingTodo: UUID?
 
   var body: some View {
     HStack {
       TextField("", text: $todo.title)
-        .focused($editingTodo)
+        .focused($editingTodo, equals: todo.id)
 
       Spacer()
 
@@ -25,14 +25,14 @@ struct EditTodoView: View {
         } label: {
           Image(systemName: "arrow.up")
         }
-        .disabled(todo.id == 1)
+        .disabled(todo.order == 1)
 
         Button {
           appState.move(todo, direction: "down")
         } label: {
           Image(systemName: "arrow.down")
         }
-        .disabled(todo.id == appState.todos.count)
+        .disabled(todo.order == appState.todos.count)
 
         Button {
           appState.deleteTodo(todo)
@@ -49,13 +49,18 @@ struct EditTodoView: View {
       }
       .buttonStyle(.plain)
     }
-    .onChange(of: editingTodo) { newValue in    
-      if newValue {
-        appState.todoBeingEdited = todo
+    .onChange(of: editingTodo) { newValue in
+      if newValue == todo.id {
+        appState.todoBeingEdited = nil
+      }
+
+      let matchingTodo = appState.todos.first {
+        $0.id == newValue
+      }
+      if let matchingTodo {
+        appState.todoBeingEdited = matchingTodo
       } else {
-        if appState.todoBeingEdited == todo {
-          appState.todoBeingEdited = nil
-        }
+        appState.todoBeingEdited = nil
       }
     }
   }

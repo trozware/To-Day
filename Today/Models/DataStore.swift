@@ -24,7 +24,7 @@ struct DataStore {
     do {
       let data = try Data(contentsOf: fileURL)
       let todos = try JSONDecoder().decode([Todo].self, from: data)
-        .sorted(using: KeyPathComparator(\.id))
+        .sorted(using: KeyPathComparator(\.order))
       return todos
     } catch {
       print(error)

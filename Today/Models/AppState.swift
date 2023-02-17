@@ -25,7 +25,7 @@ extension AppState {
     if sortCompletedToEnd {
       return todos.sorted(using: KeyPathComparator(\.sortProperty))
     } else {
-      return todos.sorted(using: KeyPathComparator(\.id))
+      return todos.sorted(using: KeyPathComparator(\.order))
     }
   }
 
@@ -86,7 +86,7 @@ extension AppState {
 
 extension AppState {
   func createNewTodo(title: String) {
-    let newTodo = Todo(id: todos.count + 1, title: title)
+    let newTodo = Todo(order: todos.count + 1, title: title)
     todos.append(newTodo)
     saveData()
   }
@@ -95,7 +95,7 @@ extension AppState {
     todos.removeAll {
       $0.id == todo.id
     }
-    reassignIDs()
+    reassignOrders()
     saveData()
   }
 
@@ -115,9 +115,9 @@ extension AppState {
     }
   }
 
-  func reassignIDs() {
+  func reassignOrders() {
     for todoIndex in 0 ..< todos.count {
-      todos[todoIndex].id = todoIndex + 1
+      todos[todoIndex].order = todoIndex + 1
     }
   }
 
@@ -132,23 +132,23 @@ extension AppState {
         return
       }
 
-      todos[todoIndex].id -= 1
-      todos[todoIndex - 1].id += 1
+      todos[todoIndex].order -= 1
+      todos[todoIndex - 1].order += 1
     } else {
       guard let todoIndex, todoIndex < todos.count - 1 else {
         return
       }
 
-      todos[todoIndex].id += 1
-      todos[todoIndex + 1].id -= 1
+      todos[todoIndex].order += 1
+      todos[todoIndex + 1].order -= 1
     }
 
-    todos.sort(using: KeyPathComparator(\.id))
+    todos.sort(using: KeyPathComparator(\.order))
 
     saveData()
   }
 
-  func toggleComplete(_ id: Int) {
+  func toggleComplete(_ id: UUID) {
     let todoIndex = todos.firstIndex {
       $0.id == id
     }

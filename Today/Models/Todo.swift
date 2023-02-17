@@ -8,22 +8,23 @@
 import Foundation
 
 struct Todo: Identifiable, Equatable, Hashable, Codable {
-  var id: Int
+  var id = UUID()
+  var order: Int
   var title: String
   var isComplete = false
 
   var sortProperty: Int {
-    id + (isComplete ? 10000 : 0)
+    order + (isComplete ? 10000 : 0)
   }
 }
 
 extension Todo {
   static var sampleToDos: [Todo] {
     [
-      Todo(id: 1, title: "Edit the todos"),
-      Todo(id: 2, title: "Add new one"),
-      Todo(id: 3, title: "Only for today"),
-      Todo(id: 4, title: "Check off progress")
+      Todo(order: 1, title: "Edit the todos"),
+      Todo(order: 2, title: "Add new one"),
+      Todo(order: 3, title: "Only for today"),
+      Todo(order: 4, title: "Check off progress")
     ]
   }
 }
