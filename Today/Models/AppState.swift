@@ -121,13 +121,13 @@ extension AppState {
     }
   }
 
-  func move(_ todo: Todo, direction: String) {
+  func move(_ todo: Todo, direction: MoveDirection) {
     let todoIndex = todos.firstIndex {
       $0.id == todo.id
     }
 
 
-    if direction == "up" {
+    if direction == .up {
       guard let todoIndex, todoIndex > 0 else {
         return
       }

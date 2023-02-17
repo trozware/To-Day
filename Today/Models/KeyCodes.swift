@@ -11,3 +11,7 @@ enum KeyCodes {
   static var upArrow: UInt16 = 126
   static var downArrow: UInt16 = 125
 }
+
+enum MoveDirection {
+  case up, down
+}

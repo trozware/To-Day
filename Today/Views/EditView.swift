@@ -64,11 +64,11 @@ struct EditView: View {
         let keyCode = event.keyCode
         switch keyCode {
         case KeyCodes.upArrow:
-          appState.move(todo, direction: "up")
+          appState.move(todo, direction: .up)
         case KeyCodes.downArrow:
-          appState.move(todo, direction: "down")
+          appState.move(todo, direction: .down)
         default:
-          print(keyCode)
+          break
         }
       }
       return event
