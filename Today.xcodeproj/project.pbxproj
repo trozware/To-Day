@@ -124,6 +124,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2675DBF32974BA6500492B03 /* Build configuration list for PBXNativeTarget "To-Day" */;
 			buildPhases = (
+				26516DEE29A0A6A500A5BD6B /* ShellScript */,
 				2675DBE02974BA6500492B03 /* Sources */,
 				2675DBE12974BA6500492B03 /* Frameworks */,
 				2675DBE22974BA6500492B03 /* Resources */,
@@ -187,6 +188,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26516DEE29A0A6A500A5BD6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=/opt/homebrew/bin:$PATH\nif which swiftlint >/dev/null; then\n  swiftlint --fix --no-cache\n  swiftlint --no-cache\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2675DBE02974BA6500492B03 /* Sources */ = {

@@ -16,6 +16,8 @@ enum KeyCodes {
   static var tabKey: UInt16 = 48
 }
 
+// swiftlint: disable identifier_name
 enum MoveDirection {
   case up, down
 }
+// swiftlint: enable identifier_name

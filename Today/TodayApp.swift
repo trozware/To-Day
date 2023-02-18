@@ -15,7 +15,7 @@ struct TodayApp: App {
   @Environment(\.openWindow) private var openWindow
 
   @State private var launchOnLogin = SMAppService.mainApp.status == .enabled
-  private let updaterController: SPUStandardUpdaterController = SPUStandardUpdaterController(
+  private let updaterController = SPUStandardUpdaterController(
     startingUpdater: true,
     updaterDelegate: nil,
     userDriverDelegate: nil
@@ -56,7 +56,7 @@ struct TodayApp: App {
         Divider()
 
         CheckForUpdatesView(updater: updaterController.updater)
-        
+
         Button("About To-Day…") {
           openWindow(id: "about_today")
           NSApp.activate(ignoringOtherApps: true)
@@ -81,7 +81,9 @@ struct TodayApp: App {
     Window("About To-Day", id: "about_today") {
       AboutView()
     }
-    .defaultSize(width: 350, height: 400)
+    .defaultSize(width: 500, height: 630)
+    .defaultPosition(.center)
+    .windowResizability(.contentSize)
   }
 }
 

@@ -5,7 +5,7 @@
 //  Created by Sarah Reichelt on 18/1/2023.
 //
 
-//  TODO: keyboard shortcuts - requires list items to be selectable somehow
+// TODO: test moving the edit field to the bottom
 
 import SwiftUI
 
@@ -28,7 +28,7 @@ struct EditView: View {
       Spacer()
 
       helpText
-      
+
       HStack {
         Button(role: .destructive) {
           appState.deleteAll()
@@ -60,8 +60,11 @@ struct EditView: View {
     let arrowUpImg = Image(systemName: "arrow.up")
     let arrowDownImg = Image(systemName: "arrow.down")
 
-    if let _ = appState.todoBeingEdited {
-      return Text("Use \(commandImg) \(arrowUpImg) or \(commandImg) \(arrowDownImg) to move the todo, \(commandImg) D to delete.")
+    if appState.todoBeingEdited != nil {
+      let editMsg = Text("Use \(commandImg) \(arrowUpImg) or ") +
+                         Text("\(commandImg) \(arrowDownImg) to move the todo, ") +
+                         Text("\(commandImg) D to delete.")
+      return editMsg
     } else {
       return Text("Type and press Return, or click a todo to edit.")
     }

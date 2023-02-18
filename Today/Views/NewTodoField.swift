@@ -18,7 +18,7 @@ struct NewTodoField: View {
       .frame(maxWidth: .infinity)
       .padding(.horizontal, -8)
 
-      .onSubmit() {
+      .onSubmit {
         // only works with Return
         if !newTitle.isEmpty {
           appState.createNewTodo(title: newTitle)

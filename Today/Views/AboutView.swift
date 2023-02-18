@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// swiftlint: disable line_length
+
 struct AboutView: View {
   var body: some View {
     VStack(spacing: 20) {
@@ -24,7 +26,7 @@ struct AboutView: View {
       Text("There are only two settings: **Complete at End** sorts the list in the menu, moving the completed todos to the end and **Launch on Login** sets whether you want the app to start automatically when you log in.")
 
       VStack(spacing: 3) {
-        Text("This app is free, but if you'd like to support my work, please:")
+        Text("This app is free, but if you'd like to support it, please:")
         Button {
           buyCoffee()
         } label: {
@@ -95,3 +97,5 @@ struct AboutView_Previews: PreviewProvider {
     AboutView()
   }
 }
+
+// swiftlint: enable line_length
