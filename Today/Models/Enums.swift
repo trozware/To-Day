@@ -1,5 +1,5 @@
 //
-//  KeyCodes.swift
+//  Enums.swift
 //  To-Day
 //
 //  Created by Sarah Reichelt on 17/2/2023.

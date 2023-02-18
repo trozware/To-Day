@@ -74,6 +74,13 @@ struct EditView: View {
         return event
       }
 
+      if event.keyCode == KeyCodes.tabKey {
+        if let nextTodo = appState.nextTodo(after: todo) {
+          appState.todoBeingEdited = nextTodo
+        }
+        return event
+      }
+
       if event.modifierFlags.contains(.command) {
         let keyCode = event.keyCode
         switch keyCode {

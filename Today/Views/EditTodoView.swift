@@ -51,6 +51,11 @@ struct EditTodoView: View {
     .onChange(of: todo.isComplete) { _ in
       appState.saveData()
     }
+    .onChange(of: appState.todoBeingEdited) { newValue in
+      if let newValue, newValue == todo {
+        editingTodo = todo.id
+      }
+    }
   }
 }
 

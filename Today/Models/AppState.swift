@@ -168,4 +168,14 @@ extension AppState {
   func saveData() {
     dataStore.saveTodos(todos: todos)
   }
+
+  func nextTodo(after todo: Todo) -> Todo? {
+    let todoIndex = todos.firstIndex {
+      $0.id == todo.id
+    }
+    if let todoIndex, todoIndex < todos.count - 1 {
+      return todos[todoIndex + 1]
+    }
+    return nil
+  }
 }

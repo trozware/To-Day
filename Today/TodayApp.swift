@@ -29,6 +29,7 @@ struct TodayApp: App {
 
     Window("Edit Todos", id: "edit_todos") {
       EditView()
+        .environmentObject(appState)
     }
     .defaultSize(width: 350, height: 400)
 
