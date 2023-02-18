@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262051C729A0B8F2008BAFD0 /* EditGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262051C629A0B8F2008BAFD0 /* EditGroup.swift */; };
+		262051C929A0B950008BAFD0 /* SettingsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262051C829A0B950008BAFD0 /* SettingsGroup.swift */; };
+		262051CB29A0B9A2008BAFD0 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262051CA29A0B9A2008BAFD0 /* AppGroup.swift */; };
 		262623E52977A8B6001F9610 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262623E42977A8B6001F9610 /* EditView.swift */; };
 		262623E72977C371001F9610 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262623E62977C371001F9610 /* AboutView.swift */; };
 		266E9C6A299DF224003CC545 /* EditTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E9C69299DF224003CC545 /* EditTodoView.swift */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		2604F4E42978D9F40036A5BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2604F4E52978DFBF0036A5BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		262051C629A0B8F2008BAFD0 /* EditGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroup.swift; sourceTree = "<group>"; };
+		262051C829A0B950008BAFD0 /* SettingsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGroup.swift; sourceTree = "<group>"; };
+		262051CA29A0B9A2008BAFD0 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		262623E42977A8B6001F9610 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		262623E62977C371001F9610 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		266E9C69299DF224003CC545 /* EditTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTodoView.swift; sourceTree = "<group>"; };
@@ -54,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262051C529A0B8D8008BAFD0 /* Menu Views */ = {
+			isa = PBXGroup;
+			children = (
+				262051C629A0B8F2008BAFD0 /* EditGroup.swift */,
+				262051C829A0B950008BAFD0 /* SettingsGroup.swift */,
+				262051CA29A0B9A2008BAFD0 /* AppGroup.swift */,
+			);
+			path = "Menu Views";
+			sourceTree = "<group>";
+		};
 		266E9C68299DF213003CC545 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2675DBE72974BA6500492B03 /* TodayApp.swift */,
+				262051C529A0B8D8008BAFD0 /* Menu Views */,
 				266E9C68299DF213003CC545 /* Views */,
 				26BC9AF2297A100E00E19AA3 /* Models */,
 				26D8239A2978CAE70051859E /* Updater.swift */,
@@ -218,12 +235,15 @@
 				2675DBE82974BA6500492B03 /* TodayApp.swift in Sources */,
 				26F2268E2976347000EDBEF3 /* DataStore.swift in Sources */,
 				26D018D3299F0C7F00C8A9B0 /* KeyCodes.swift in Sources */,
+				262051CB29A0B9A2008BAFD0 /* AppGroup.swift in Sources */,
 				26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */,
 				26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */,
 				266E9C6A299DF224003CC545 /* EditTodoView.swift in Sources */,
 				262623E52977A8B6001F9610 /* EditView.swift in Sources */,
 				266E9C6C299DF279003CC545 /* NewTodoField.swift in Sources */,
 				262623E72977C371001F9610 /* AboutView.swift in Sources */,
+				262051C929A0B950008BAFD0 /* SettingsGroup.swift in Sources */,
+				262051C729A0B8F2008BAFD0 /* EditGroup.swift in Sources */,
 				26D8239B2978CAE70051859E /* Updater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

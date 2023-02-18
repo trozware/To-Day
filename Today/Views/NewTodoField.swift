@@ -16,7 +16,8 @@ struct NewTodoField: View {
     TextField("Enter new todo and press Return.", text: $newTitle)
       .focused($editFieldHasFocus)
       .frame(maxWidth: .infinity)
-      .padding(.horizontal, -8)
+//      .padding(.horizontal, -8)
+      .padding(.horizontal)
 
       .onSubmit {
         // only works with Return

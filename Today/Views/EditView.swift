@@ -5,8 +5,6 @@
 //  Created by Sarah Reichelt on 18/1/2023.
 //
 
-// TODO: test moving the edit field to the bottom
-
 import SwiftUI
 
 struct EditView: View {
@@ -18,14 +16,14 @@ struct EditView: View {
         ForEach($appState.todos) { $todo in
           EditTodoView(appState: appState, todo: $todo)
         }
-
-        NewTodoField(appState: appState)
       }
-      .textFieldStyle(.roundedBorder)
-      .listStyle(.inset(alternatesRowBackgrounds: true))
-      .environment(\.defaultMinListRowHeight, 30)
+      .textFieldStyle(.squareBorder)
+      .listStyle(.sidebar)
+      .environment(\.defaultMinListRowHeight, 32)
 
       Spacer()
+
+      NewTodoField(appState: appState)
 
       helpText
 
@@ -48,7 +46,7 @@ struct EditView: View {
       }
       .padding([.horizontal, .bottom], 12)
     }
-    .frame(minWidth: 350)
+    .frame(minWidth: 350, minHeight: 300)
     .onAppear(perform: monitorKeystrokes)
     .onDisappear {
       appState.todoBeingEdited = nil
