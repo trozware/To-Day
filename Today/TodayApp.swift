@@ -9,25 +9,26 @@ import SwiftUI
 
 @main
 struct TodayApp: App {
-  @ObservedObject var appState = AppState()
+  @StateObject var appState = AppState()
 
   var body: some Scene {
     MenuBarExtra {
       Group {
         appState.todoButtons
 
-        EditGroup(appState: appState)
+        EditGroup()
 
-        SettingsGroup(appState: appState)
+        SettingsGroup()
 
         AppGroup()
       }
+      .environmentObject(appState)
     } label: {
       appState.menuTitle
     }
 
     Window("Edit Todos", id: "edit_todos") {
-      EditView(appState: appState)
+      EditView()
     }
     .defaultSize(width: 350, height: 400)
 

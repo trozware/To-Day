@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct EditView: View {
-  @ObservedObject var appState: AppState
+  @EnvironmentObject var appState: AppState
 
   var body: some View {
     VStack {
       List {
         ForEach($appState.todos) { $todo in
-          EditTodoView(appState: appState, todo: $todo)
+          EditTodoView(todo: $todo)
         }
       }
       .textFieldStyle(.squareBorder)
@@ -23,7 +23,7 @@ struct EditView: View {
 
       Spacer()
 
-      NewTodoField(appState: appState)
+      NewTodoField()
 
       helpText
 
@@ -95,7 +95,8 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
   static var previews: some View {
-    EditView(appState: AppState())
+    EditView()
+      .environmentObject(AppState())
       .frame(width: 350)
   }
 }

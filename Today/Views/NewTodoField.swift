@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewTodoField: View {
-  @ObservedObject var appState: AppState
+  @EnvironmentObject var appState: AppState
   @State private var newTitle = ""
   @FocusState var editFieldHasFocus: Bool
 
@@ -43,7 +43,8 @@ struct NewTodoField: View {
 
 struct NewTodoField_Previews: PreviewProvider {
   static var previews: some View {
-    NewTodoField(appState: AppState())
+    NewTodoField()
+      .environmentObject(AppState())
       .frame(width: 350)
   }
 }

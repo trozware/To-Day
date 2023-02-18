@@ -9,7 +9,7 @@ import SwiftUI
 import ServiceManagement
 
 struct SettingsGroup: View {
-  @ObservedObject var appState: AppState
+  @EnvironmentObject var appState: AppState
   @State private var launchOnLogin = SMAppService.mainApp.status == .enabled
 
   var body: some View {
@@ -41,7 +41,8 @@ struct SettingsGroup: View {
 struct SettingsGroup_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
-      SettingsGroup(appState: AppState())
+      SettingsGroup()
+        .environmentObject(AppState())
     }
   }
 }

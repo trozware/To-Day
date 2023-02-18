@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditTodoView: View {
-  @ObservedObject var appState: AppState
+  @EnvironmentObject var appState: AppState
   @Binding var todo: Todo
   @FocusState var editingTodo: UUID?
 
@@ -56,7 +56,8 @@ struct EditTodoView: View {
 
 struct EditTodoView_Previews: PreviewProvider {
   static var previews: some View {
-    EditTodoView(appState: AppState(), todo: .constant(Todo.sampleToDos[0]))
+    EditTodoView(todo: .constant(Todo.sampleToDos[0]))
+      .environmentObject(AppState())
       .frame(width: 350)
   }
 }

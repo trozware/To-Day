@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditGroup: View {
-  @ObservedObject var appState: AppState
+  @EnvironmentObject var appState: AppState
   @Environment(\.openWindow) private var openWindow
 
   var body: some View {
@@ -36,7 +36,8 @@ struct EditGroup: View {
 struct EditGroup_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
-      EditGroup(appState: AppState())
+      EditGroup()
+        .environmentObject(AppState())
     }
   }
 }
