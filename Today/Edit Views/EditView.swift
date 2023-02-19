@@ -7,8 +7,18 @@
 
 import SwiftUI
 
+// TODO: Not sure about text edit styles in list
+
+// TODO: Deleting last entry crashes
+
+// TODO: Moving no longer keeps focus
+
+// TODO: Show a different title of there are no todos at all
+
 struct EditView: View {
   @EnvironmentObject var appState: AppState
+  @State private var isEnteringNew = false
+  @State private var justTabbedToFirst = false
 
   var body: some View {
     VStack {
@@ -23,13 +33,13 @@ struct EditView: View {
 
       Spacer()
 
-      NewTodoField()
+      NewTodoField(isEnteringNew: $isEnteringNew)
 
       helpText
 
       HStack {
         Button(role: .destructive) {
-          appState.deleteAll()
+          deleteAll()
         } label: {
           Text("Delete All")
             .foregroundColor(.red)
@@ -50,6 +60,11 @@ struct EditView: View {
     .onAppear(perform: monitorKeystrokes)
     .onDisappear {
       appState.todoBeingEdited = nil
+    }
+    .onChange(of: isEnteringNew) { newValue in
+      if newValue == false {
+        tabOutOfNew()
+      }
     }
   }
 
@@ -75,8 +90,12 @@ struct EditView: View {
       }
 
       if event.keyCode == KeyCodes.tabKey {
-        if let nextTodo = appState.nextTodo(after: todo) {
+        if justTabbedToFirst {
+          justTabbedToFirst = false
+        } else if let nextTodo = appState.nextTodo(after: todo) {
           appState.todoBeingEdited = nextTodo
+        } else {
+          isEnteringNew = true
         }
         return event
       }
@@ -89,13 +108,38 @@ struct EditView: View {
         case KeyCodes.downArrow:
           appState.move(todo, direction: .down)
         case KeyCodes.dKey:
-          appState.deleteTodo(todo)
+          deleteSelected(todo)
         default:
           // print("command: \(keyCode)")
           break
         }
       }
       return event
+    }
+  }
+
+  func deleteAll() {
+    appState.todoBeingEdited = nil
+    justTabbedToFirst = false
+    isEnteringNew = true
+
+    appState.deleteAll()
+  }
+
+  func deleteSelected(_ todo: Todo) {
+    appState.todoBeingEdited = nil
+    justTabbedToFirst = false
+    isEnteringNew = true
+
+    appState.deleteTodo(todo)
+  }
+
+  func tabOutOfNew() {
+    justTabbedToFirst = true
+    appState.todoBeingEdited = appState.todos.first
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+      justTabbedToFirst = false
     }
   }
 }

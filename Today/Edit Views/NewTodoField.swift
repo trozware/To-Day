@@ -11,6 +11,7 @@ struct NewTodoField: View {
   @EnvironmentObject var appState: AppState
   @State private var newTitle = ""
   @FocusState var editFieldHasFocus: Bool
+  @Binding var isEnteringNew: Bool
 
   var body: some View {
     TextField("Enter new todo and press Return.", text: $newTitle)
@@ -37,12 +38,18 @@ struct NewTodoField: View {
           editFieldHasFocus = true
         }
       }
+      .onChange(of: editFieldHasFocus) { newValue in
+        isEnteringNew = newValue
+      }
+      .onChange(of: isEnteringNew) { _ in
+        editFieldHasFocus = isEnteringNew
+      }
   }
 }
 
 struct NewTodoField_Previews: PreviewProvider {
   static var previews: some View {
-    NewTodoField()
+    NewTodoField(isEnteringNew: .constant(true))
       .environmentObject(AppState())
       .frame(width: 350)
   }
