@@ -70,15 +70,14 @@
 			path = "Menu Views";
 			sourceTree = "<group>";
 		};
-		266E9C68299DF213003CC545 /* Views */ = {
+		266E9C68299DF213003CC545 /* Edit Views */ = {
 			isa = PBXGroup;
 			children = (
 				262623E42977A8B6001F9610 /* EditView.swift */,
 				266E9C69299DF224003CC545 /* EditTodoView.swift */,
 				266E9C6B299DF279003CC545 /* NewTodoField.swift */,
-				262623E62977C371001F9610 /* AboutView.swift */,
 			);
-			path = Views;
+			path = "Edit Views";
 			sourceTree = "<group>";
 		};
 		2675DBDB2974BA6500492B03 = {
@@ -105,8 +104,9 @@
 			children = (
 				2675DBE72974BA6500492B03 /* TodayApp.swift */,
 				262051C529A0B8D8008BAFD0 /* Menu Views */,
-				266E9C68299DF213003CC545 /* Views */,
+				266E9C68299DF213003CC545 /* Edit Views */,
 				26BC9AF2297A100E00E19AA3 /* Models */,
+				262623E62977C371001F9610 /* AboutView.swift */,
 				26D8239A2978CAE70051859E /* Updater.swift */,
 				2675DBEB2974BA6500492B03 /* Assets.xcassets */,
 				2675DBF02974BA6500492B03 /* Today.entitlements */,
