@@ -63,7 +63,10 @@ extension AppState {
     let totalTodos = todos.count
     let completedTodos = todos.filter { $0.isComplete }.count
 
-    if completedTodos == totalTodos {
+    if totalTodos == 0 {
+      title = "To-Day"
+      imageName = "list.bullet.clipboard"
+    } else if completedTodos == totalTodos {
       title = "To-Day: complete"
       imageName = "checklist.checked"
     } else {

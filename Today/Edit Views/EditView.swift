@@ -8,12 +8,12 @@
 import SwiftUI
 
 // TODO: Not sure about text edit styles in list
-
 // TODO: Deleting last entry crashes
-
 // TODO: Moving no longer keeps focus
+// TODO: Show a different title if there are no todos at all
 
-// TODO: Show a different title of there are no todos at all
+// CONSIDER: what about fixedSize for About window?
+// CONSIDER: how would the edit view look embedded in a Form?
 
 struct EditView: View {
   @EnvironmentObject var appState: AppState
