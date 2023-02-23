@@ -147,6 +147,10 @@ extension AppState {
 
     todos.sort(using: KeyPathComparator(\.order))
 
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+      self.todoBeingEdited = todo
+    }
+
     saveData()
   }
 

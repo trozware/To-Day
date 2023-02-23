@@ -23,7 +23,11 @@ struct EditTodoView: View {
 
       HStack(spacing: 20) {
         Button {
-          appState.deleteTodo(todo)
+          editingTodo = nil
+          appState.todoBeingEdited = nil
+          DispatchQueue.main.async {
+            appState.deleteTodo(todo)
+          }
         } label: {
           Image(systemName: "trash")
             .foregroundColor(.red)
@@ -52,7 +56,7 @@ struct EditTodoView: View {
       appState.saveData()
     }
     .onChange(of: appState.todoBeingEdited) { newValue in
-      if let newValue, newValue == todo {
+      if let newValue, newValue.id == todo.id {
         editingTodo = todo.id
       }
     }

@@ -41,7 +41,7 @@ struct NewTodoField: View {
       .onChange(of: editFieldHasFocus) { newValue in
         isEnteringNew = newValue
       }
-      .onChange(of: isEnteringNew) { _ in
+      .onChange(of: isEnteringNew) { newValue in
         editFieldHasFocus = isEnteringNew
       }
   }

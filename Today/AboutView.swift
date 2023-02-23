@@ -58,9 +58,10 @@ struct AboutView: View {
       }
 
     }
+    .fixedSize(horizontal: false, vertical: true)
     .font(.title3)
     .multilineTextAlignment(.center)
-    .frame(width: 500, height: 630)
+    .frame(width: 500)
     .padding()
   }
 

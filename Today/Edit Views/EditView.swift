@@ -8,11 +8,7 @@
 import SwiftUI
 
 // TODO: Not sure about text edit styles in list
-// TODO: Deleting last entry crashes
-// TODO: Moving no longer keeps focus
-// TODO: Show a different title if there are no todos at all
 
-// CONSIDER: what about fixedSize for About window?
 // CONSIDER: how would the edit view look embedded in a Form?
 
 struct EditView: View {
@@ -131,12 +127,16 @@ struct EditView: View {
     justTabbedToFirst = false
     isEnteringNew = true
 
-    appState.deleteTodo(todo)
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+      appState.deleteTodo(todo)
+    }
   }
 
   func tabOutOfNew() {
     justTabbedToFirst = true
-    appState.todoBeingEdited = appState.todos.first
+    if appState.todoBeingEdited == nil {
+      appState.todoBeingEdited = appState.todos.first
+    }
 
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
       justTabbedToFirst = false
