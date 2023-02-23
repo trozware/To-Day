@@ -7,29 +7,26 @@
 
 import SwiftUI
 
-// TODO: Not sure about text edit styles in list
-
-// CONSIDER: how would the edit view look embedded in a Form?
-
 struct EditView: View {
   @EnvironmentObject var appState: AppState
   @State private var isEnteringNew = false
-  @State private var justTabbedToFirst = false
 
   var body: some View {
     VStack {
-      List {
+      Form {
         ForEach($appState.todos) { $todo in
           EditTodoView(todo: $todo)
         }
+
+        VStack(alignment: .leading) {
+          Text("Enter new todo and press Return:")
+          NewTodoField(isEnteringNew: $isEnteringNew)
+        }
       }
+      .formStyle(.grouped)
       .textFieldStyle(.squareBorder)
       .listStyle(.sidebar)
       .environment(\.defaultMinListRowHeight, 32)
-
-      Spacer()
-
-      NewTodoField(isEnteringNew: $isEnteringNew)
 
       helpText
 
@@ -57,11 +54,6 @@ struct EditView: View {
     .onDisappear {
       appState.todoBeingEdited = nil
     }
-    .onChange(of: isEnteringNew) { newValue in
-      if newValue == false {
-        tabOutOfNew()
-      }
-    }
   }
 
   var helpText: Text {
@@ -71,8 +63,8 @@ struct EditView: View {
 
     if appState.todoBeingEdited != nil {
       let editMsg = Text("Use \(commandImg) \(arrowUpImg) or ") +
-                         Text("\(commandImg) \(arrowDownImg) to move the todo, ") +
-                         Text("\(commandImg) D to delete.")
+      Text("\(commandImg) \(arrowDownImg) to move the todo, ") +
+      Text("\(commandImg) D to delete.")
       return editMsg
     } else {
       return Text("Type and press Return, or click a todo to edit.")
@@ -82,17 +74,6 @@ struct EditView: View {
   func monitorKeystrokes() {
     NSEvent.addLocalMonitorForEvents(matching: .keyUp) { event in
       guard let todo = appState.todoBeingEdited else {
-        return event
-      }
-
-      if event.keyCode == KeyCodes.tabKey {
-        if justTabbedToFirst {
-          justTabbedToFirst = false
-        } else if let nextTodo = appState.nextTodo(after: todo) {
-          appState.todoBeingEdited = nextTodo
-        } else {
-          isEnteringNew = true
-        }
         return event
       }
 
@@ -116,7 +97,6 @@ struct EditView: View {
 
   func deleteAll() {
     appState.todoBeingEdited = nil
-    justTabbedToFirst = false
     isEnteringNew = true
 
     appState.deleteAll()
@@ -124,22 +104,10 @@ struct EditView: View {
 
   func deleteSelected(_ todo: Todo) {
     appState.todoBeingEdited = nil
-    justTabbedToFirst = false
     isEnteringNew = true
 
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
       appState.deleteTodo(todo)
-    }
-  }
-
-  func tabOutOfNew() {
-    justTabbedToFirst = true
-    if appState.todoBeingEdited == nil {
-      appState.todoBeingEdited = appState.todos.first
-    }
-
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-      justTabbedToFirst = false
     }
   }
 }

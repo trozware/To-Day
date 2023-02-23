@@ -13,7 +13,6 @@ enum KeyCodes {
   static var upArrow: UInt16 = 126
   static var downArrow: UInt16 = 125
   static var dKey: UInt16 = 2
-  static var tabKey: UInt16 = 48
 }
 
 // swiftlint: disable identifier_name
