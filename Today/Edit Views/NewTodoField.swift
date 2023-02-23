@@ -13,7 +13,7 @@ struct NewTodoField: View {
   @FocusState var editFieldHasFocus: Bool
   @Binding var isEnteringNew: Bool
 
-  var body: some View {                      
+  var body: some View {
     TextField("", text: $newTitle)
       .focused($editFieldHasFocus)
       .labelsHidden()

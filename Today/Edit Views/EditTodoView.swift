@@ -60,6 +60,13 @@ struct EditTodoView: View {
         editingTodo = todo.id
       }
     }
+    .onSubmit {
+      if todo.title.isEmpty {
+        appState.todoBeingEdited = nil
+        editingTodo = nil
+        appState.deleteTodo(todo)
+      }
+    }
   }
 }
 
