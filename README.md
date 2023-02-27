@@ -17,4 +17,10 @@ Things to fix:
 - [x] Editing - SwiftUI jumps the insertion cursor to the end of the field when editing an existing todo.
 - [x] Keyboard shortcuts for deleting and moving.
 - [x] Allow clicking anywhere in the text area to start editing
-- [ ] Lint & tidy up project
+- [x] Lint & tidy up project
+- [x] Fix Shift-tab so it goes from 2 to 1 and not from 2 to new
+
+Dev notes:
+
+- Not happy with chain of `onChange` modifiers to track focus.
+- This leads to various timed fixes which are fragile.

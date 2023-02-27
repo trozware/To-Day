@@ -54,6 +54,11 @@ struct EditView: View {
     .onDisappear {
       appState.todoBeingEdited = nil
     }
+    .onChange(of: isEnteringNew) { newValue in
+      if newValue {
+        appState.todoBeingEdited = nil
+      }
+    }
   }
 
   var helpText: Text {
@@ -106,6 +111,7 @@ struct EditView: View {
     appState.todoBeingEdited = nil
     isEnteringNew = true
 
+    // if this is done immediately, deleting the last todo crashes the app
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
       appState.deleteTodo(todo)
     }

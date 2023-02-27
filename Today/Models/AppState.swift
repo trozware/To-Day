@@ -13,9 +13,25 @@ class AppState: ObservableObject {
   var dataStore = DataStore()
 
   @Published var todos: [Todo] = DataStore().loadTodos()
-  @Published var todoBeingEdited: Todo?
+  @Published var todoBeingEdited: Todo? {
+    didSet {
+      if let todoBeingEdited, todoBeingEdited.order == 1 {
+        // hack to allow shift-tabbing into first todo field
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+          self.checkForSelection(savedTodoId: todoBeingEdited.id)
+        }
+      }
+    }
+  }
 
   @AppStorage("sortCompletedToEnd") var sortCompletedToEnd = true
+
+  func checkForSelection(savedTodoId: UUID) {
+    if savedTodoId != todoBeingEdited?.id {
+      self.todoBeingEdited = self.todos.first
+    } else {
+    }
+  }
 }
 
 // MARK: - Computed Properties
@@ -147,6 +163,7 @@ extension AppState {
 
     todos.sort(using: KeyPathComparator(\.order))
 
+    // if this is done immediately, the focus doesn't move with the todo
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
       self.todoBeingEdited = todo
     }

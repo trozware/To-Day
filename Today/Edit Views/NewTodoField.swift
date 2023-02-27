@@ -26,10 +26,11 @@ struct NewTodoField: View {
         }
       }
       .onAppear {
-        editFieldHasFocus = true
-      }
-      .onDisappear {
-        appState.todoBeingEdited = nil
+        // there's a hack to allow shift-tabbing into first todo field
+        // so this has to happen after that, the first time this window opens
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+          editFieldHasFocus = true
+        }
       }
       .onChange(of: appState.todoBeingEdited) { newValue in
         if newValue == nil {
