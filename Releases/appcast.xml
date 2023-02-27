@@ -3,6 +3,14 @@
     <channel>
         <title>To-Day</title>
         <item>
+            <title>1.2</title>
+            <pubDate>Mon, 27 Feb 2023 10:42:01 +1000</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="11973969" type="application/octet-stream" sparkle:edSignature="MQuCigj0ytFl86hT/OlhYcecwOxlBTYDfTEbzvnDfw2UcmQL7lQN5b8frXGK3ZA6j6MZEXUdGIyqRMoGQNl4DQ=="/>
+        </item>
+        <item>
             <title>1.1</title>
             <pubDate>Fri, 20 Jan 2023 14:14:58 +1000</pubDate>
             <sparkle:version>5</sparkle:version>

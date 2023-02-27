@@ -25,7 +25,7 @@ struct EditTodoView: View {
         Button {
           editingTodo = nil
           appState.todoBeingEdited = nil
-          
+
           // if this is done immediately, deleting the last todo crashes the app
           DispatchQueue.main.async {
             appState.deleteTodo(todo)

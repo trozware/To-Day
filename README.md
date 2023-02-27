@@ -12,7 +12,7 @@ This app is free, but if you'd like to support my work, please [https://ko-fi.co
 
 If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social/@troz) on Mastodon.
 
-Things to fix:
+#### Things to fix:
 
 - [x] Editing - SwiftUI jumps the insertion cursor to the end of the field when editing an existing todo.
 - [x] Keyboard shortcuts for deleting and moving.
@@ -20,7 +20,21 @@ Things to fix:
 - [x] Lint & tidy up project
 - [x] Fix Shift-tab so it goes from 2 to 1 and not from 2 to new
 
-Dev notes:
+#### Dev notes:
 
 - Not happy with chain of `onChange` modifiers to track focus.
 - This leads to various timed fixes which are fragile.
+
+## Sparkle process
+
+- Archive app
+- Distribute using Developer ID, using Apple notary service
+- Export notarised app and copy into read-write DMG
+- Configure DMG window as required
+- Eject DMG and use Disk Utility to convert to read-only
+- Set name to To-Day.dmg and move to Releases folder
+- Show Sparkle folder in Finder
+- Open Terminal at artifacts folder in the level above Sparkle
+- Run `./bin/generate_appcast /path/to/Releases`
+- Push to repo
+- Run old version and test update process (errors appear in Console)
