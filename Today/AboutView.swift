@@ -21,7 +21,7 @@ struct AboutView: View {
 
       Text("Every app I found had a terrific list of features, most of which I didn't want, so I wrote my own.")
 
-      Text("Use the **Edit Todos…** menu item to add, delete, edit and move your todos. Select them in the menu to mark them as complete or incomplete.")
+      Text("Use the **Edit Todos…** menu item to add, delete and edit your todos. Select them in the menu to mark them as complete or incomplete.")
 
       Text("There are only two settings: **Complete at End** sorts the list in the menu, moving the completed todos to the end and **Launch on Login** sets whether you want the app to start automatically when you log in.")
 

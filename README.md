@@ -24,6 +24,7 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 
 - Not happy with chain of `onChange` modifiers to track focus.
 - This leads to various timed fixes which are fragile.
+- Testing new version with no focus tracking. Doesn't allow moves, but maybe that's ok.
 
 ## Sparkle process
 

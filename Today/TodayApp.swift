@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct TodayApp: App {
   @StateObject var appState = AppState()
+  @NSApplicationDelegateAdaptor var delegate: AppDelegate
 
   var body: some Scene {
     MenuBarExtra {
@@ -39,5 +40,17 @@ struct TodayApp: App {
     .defaultSize(width: 500, height: 630)
     .defaultPosition(.center)
     .windowResizability(.contentSize)
+  }
+}
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+  // TODO: work out how to save on quit
+
+  func applicationDidFinishLaunching(_ notification: Notification) {
+    print("applicationDidFinishLaunching")
+  }
+
+  func applicationWillTerminate(_ notification: Notification) {
+    print("applicationWillTerminate")
   }
 }

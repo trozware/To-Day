@@ -10,64 +10,37 @@ import SwiftUI
 struct EditTodoView: View {
   @EnvironmentObject var appState: AppState
   @Binding var todo: Todo
-  @FocusState var editingTodo: UUID?
 
   var body: some View {
     HStack {
       TextField("", text: $todo.title)
         .labelsHidden()
-        .focused($editingTodo, equals: todo.id)
         .padding(.trailing, 10)
-
-      Spacer()
 
       HStack(spacing: 20) {
         Button {
-          editingTodo = nil
-          appState.todoBeingEdited = nil
-
-          // if this is done immediately, deleting the last todo crashes the app
-          DispatchQueue.main.async {
-            appState.deleteTodo(todo)
-          }
+          appState.deleteTodo(todo)
         } label: {
           Image(systemName: "trash")
             .foregroundColor(.red)
         }
+        .buttonStyle(.plain)
 
         Toggle("", isOn: $todo.isComplete)
           .labelsHidden()
           .padding(.trailing, 6)
           .toggleStyle(.switch)
           .tint(.green)
-      }
-      .buttonStyle(.plain)
-    }
-    .onChange(of: editingTodo) { newValue in
-      if newValue == nil && appState.todoBeingEdited?.id == todo.id {
-        appState.todoBeingEdited = nil
-      }
-
-      let matchingTodo = appState.todos.first {
-        $0.id == newValue
-      }
-      if let matchingTodo {
-        appState.todoBeingEdited = matchingTodo
-      }
-    }
-    .onChange(of: todo.isComplete) { _ in
-      appState.saveData()
-    }
-    .onChange(of: appState.todoBeingEdited) { newValue in
-      if let newValue, newValue.id == todo.id {
-        editingTodo = todo.id
+          .onChange(of: todo.isComplete) { _ in
+            appState.saveData()
+          }
       }
     }
     .onSubmit {
       if todo.title.isEmpty {
-        appState.todoBeingEdited = nil
-        editingTodo = nil
         appState.deleteTodo(todo)
+      } else {
+        appState.saveData()
       }
     }
   }
