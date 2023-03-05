@@ -15,7 +15,7 @@ class AppState: ObservableObject {
       debouncedSave()
     }
   }
-  
+
   @AppStorage("sortCompletedToEnd") var sortCompletedToEnd = true
 
   var dataStore = DataStore()
@@ -109,17 +109,17 @@ extension AppState {
 
 extension AppState {
   func createNewTodo(title: String) {
-    let newTodo = Todo(order: todos.count + 1, title: title)
+    let maxOrder = todos.reduce(0) { partialResult, todo in
+      max(partialResult, todo.order)
+    }
+    let newTodo = Todo(order: maxOrder + 1, title: title)
     todos.append(newTodo)
-    saveData()
   }
 
   func deleteTodo(_ todo: Todo) {
     todos.removeAll {
       $0.id == todo.id
     }
-    reassignOrders()
-    saveData()
   }
 
   func deleteAll() {
@@ -134,13 +134,6 @@ extension AppState {
     let response = alert.runModal()
     if response == .alertFirstButtonReturn {
       todos = []
-      saveData()
-    }
-  }
-
-  func reassignOrders() {
-    for todoIndex in 0 ..< todos.count {
-      todos[todoIndex].order = todoIndex + 1
     }
   }
 
@@ -151,18 +144,11 @@ extension AppState {
     if let todoIndex {
       todos[todoIndex].isComplete.toggle()
     }
-
-    saveData()
   }
 
   func markAll(complete: Bool) {
     for index in 0 ..< todos.count {
       todos[index].isComplete = complete
     }
-    saveData()
-  }
-
-  func saveData() {
-    debouncedSave()
   }
 }

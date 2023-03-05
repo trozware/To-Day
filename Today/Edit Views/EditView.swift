@@ -25,31 +25,10 @@ struct EditView: View {
       .formStyle(.grouped)
       .textFieldStyle(.squareBorder)
 
-      HStack {
-        Button(role: .destructive) {
-          deleteAll()
-        } label: {
-          Text("Delete All")
-            .foregroundColor(.red)
-            .opacity(appState.todos.isEmpty ? 0.5 : 1)
-        }
-        .disabled(appState.todos.isEmpty)
-
-        Spacer()
-
-        Button("Mark All Incomplete") {
-          appState.markAll(complete: false)
-        }
-        .disabled(appState.allIncomplete)
-      }
-      .padding([.horizontal, .bottom], 12)
+      EditButtons()
     }
     .frame(minWidth: 350, minHeight: 300)
 
-  }
-
-  func deleteAll() {
-    appState.deleteAll()
   }
 }
 

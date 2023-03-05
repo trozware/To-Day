@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261C2CEA29B4746000049616 /* EditButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C2CE929B4746000049616 /* EditButtons.swift */; };
 		262051C729A0B8F2008BAFD0 /* EditGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262051C629A0B8F2008BAFD0 /* EditGroup.swift */; };
 		262051C929A0B950008BAFD0 /* SettingsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262051C829A0B950008BAFD0 /* SettingsGroup.swift */; };
 		262051CB29A0B9A2008BAFD0 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262051CA29A0B9A2008BAFD0 /* AppGroup.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		2604F4E42978D9F40036A5BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2604F4E52978DFBF0036A5BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		261C2CE929B4746000049616 /* EditButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtons.swift; sourceTree = "<group>"; };
 		262051C629A0B8F2008BAFD0 /* EditGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroup.swift; sourceTree = "<group>"; };
 		262051C829A0B950008BAFD0 /* SettingsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGroup.swift; sourceTree = "<group>"; };
 		262051CA29A0B9A2008BAFD0 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				262623E42977A8B6001F9610 /* EditView.swift */,
 				266E9C69299DF224003CC545 /* EditTodoView.swift */,
 				266E9C6B299DF279003CC545 /* NewTodoField.swift */,
+				261C2CE929B4746000049616 /* EditButtons.swift */,
 			);
 			path = "Edit Views";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				266E9C6A299DF224003CC545 /* EditTodoView.swift in Sources */,
 				262623E52977A8B6001F9610 /* EditView.swift in Sources */,
 				266E9C6C299DF279003CC545 /* NewTodoField.swift in Sources */,
+				261C2CEA29B4746000049616 /* EditButtons.swift in Sources */,
 				262623E72977C371001F9610 /* AboutView.swift in Sources */,
 				262051C929A0B950008BAFD0 /* SettingsGroup.swift in Sources */,
 				262051C729A0B8F2008BAFD0 /* EditGroup.swift in Sources */,
@@ -368,7 +372,7 @@
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Today/Preview Content\"";
 				DEVELOPMENT_TEAM = TC28MCLCFA;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -383,7 +387,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -399,7 +403,7 @@
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Today/Preview Content\"";
 				DEVELOPMENT_TEAM = TC28MCLCFA;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -414,7 +418,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
