@@ -35,7 +35,8 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - Eject DMG and use Disk Utility to convert to read-only
 - Set name to To-Day.dmg and move to Releases folder
 - Show Sparkle folder in Finder
-- Open Terminal at artifacts folder in the level above Sparkle
+- Open Terminal at `artifacts` folder in the level above Sparkle
+- `cd` into `sparkle` folder
 - Run `./bin/generate_appcast /path/to/Releases`
 - Push to repo
 - Run old version and test update process (errors appear in Console)
