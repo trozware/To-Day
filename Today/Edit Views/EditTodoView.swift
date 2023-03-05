@@ -31,16 +31,11 @@ struct EditTodoView: View {
           .padding(.trailing, 6)
           .toggleStyle(.switch)
           .tint(.green)
-          .onChange(of: todo.isComplete) { _ in
-            appState.saveData()
-          }
       }
     }
     .onSubmit {
       if todo.title.isEmpty {
         appState.deleteTodo(todo)
-      } else {
-        appState.saveData()
       }
     }
   }

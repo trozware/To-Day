@@ -10,9 +10,32 @@ import SwiftUI
 // MARK: - Properties
 
 class AppState: ObservableObject {
-  var dataStore = DataStore()
-  @Published var todos: [Todo] = DataStore().loadTodos()
+  @Published var todos: [Todo] = DataStore().loadTodos() {
+    didSet {
+      debouncedSave()
+    }
+  }
+  
   @AppStorage("sortCompletedToEnd") var sortCompletedToEnd = true
+
+  var dataStore = DataStore()
+  var saveTask: DispatchWorkItem?
+
+  func debouncedSave() {
+    self.saveTask?.cancel()
+
+    let task = DispatchWorkItem { [weak self] in
+      DispatchQueue.global(qos: .background).async { [weak self] in
+        print("Saving after debounce")
+        if let self {
+          self.dataStore.saveTodos(todos: self.todos)
+        }
+      }
+    }
+
+    self.saveTask = task
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: task)
+  }
 }
 
 // MARK: - Computed Properties
@@ -140,6 +163,6 @@ extension AppState {
   }
 
   func saveData() {
-    dataStore.saveTodos(todos: todos)
+    debouncedSave()
   }
 }

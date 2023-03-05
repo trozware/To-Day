@@ -18,7 +18,6 @@
 		2675DBEC2974BA6500492B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEB2974BA6500492B03 /* Assets.xcassets */; };
 		2675DBEF2974BA6500492B03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */; };
 		26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC9AF0297A100700E19AA3 /* AppState.swift */; };
-		26D018D3299F0C7F00C8A9B0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D018D2299F0C7F00C8A9B0 /* Enums.swift */; };
 		26D823992978CA960051859E /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 26D823982978CA960051859E /* Sparkle */; };
 		26D8239B2978CAE70051859E /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8239A2978CAE70051859E /* Updater.swift */; };
 		26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F2268B29762D2A00EDBEF3 /* Todo.swift */; };
@@ -41,7 +40,6 @@
 		2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2675DBF02974BA6500492B03 /* Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Today.entitlements; sourceTree = "<group>"; };
 		26BC9AF0297A100700E19AA3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		26D018D2299F0C7F00C8A9B0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		26D8239A2978CAE70051859E /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		26D8239C2978CD120051859E /* To-Day-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "To-Day-Info.plist"; sourceTree = "<group>"; };
 		26F2268B29762D2A00EDBEF3 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				26BC9AF0297A100700E19AA3 /* AppState.swift */,
 				26F2268B29762D2A00EDBEF3 /* Todo.swift */,
 				26F2268D2976347000EDBEF3 /* DataStore.swift */,
-				26D018D2299F0C7F00C8A9B0 /* Enums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 			files = (
 				2675DBE82974BA6500492B03 /* TodayApp.swift in Sources */,
 				26F2268E2976347000EDBEF3 /* DataStore.swift in Sources */,
-				26D018D3299F0C7F00C8A9B0 /* Enums.swift in Sources */,
 				262051CB29A0B9A2008BAFD0 /* AppGroup.swift in Sources */,
 				26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */,
 				26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */,

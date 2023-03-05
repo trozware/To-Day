@@ -45,6 +45,7 @@ struct EditView: View {
       .padding([.horizontal, .bottom], 12)
     }
     .frame(minWidth: 350, minHeight: 300)
+
   }
 
   func deleteAll() {
