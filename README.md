@@ -20,12 +20,6 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - [x] Lint & tidy up project
 - [x] Fix Shift-tab so it goes from 2 to 1 and not from 2 to new
 
-#### Dev notes:
-
-- Not happy with chain of `onChange` modifiers to track focus.
-- This leads to various timed fixes which are fragile.
-- Testing new version with no focus tracking. Doesn't allow moves, but maybe that's ok.
-
 ## Sparkle process
 
 - Archive app
