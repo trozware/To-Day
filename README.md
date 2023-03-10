@@ -8,7 +8,7 @@ Use the **Edit Todos…** menu item to add, delete, edit and move your todos. Se
 
 There are only two settings: **Complete at End** sorts the list in the menu, moving the completed todos to the end and **Launch on Login** sets whether you want the app to start automatically when you log in.
 
-This app is free, but if you'd like to support my work, please [https://ko-fi.com/H2H3BU7SI](Buy Me a Coffee).
+This app is free, but if you'd like to support my work, please [Buy Me a Coffee](https://ko-fi.com/H2H3BU7SI).
 
 If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social/@troz) on Mastodon.
 
