@@ -19,7 +19,7 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - [x] Allow clicking anywhere in the text area to start editing
 - [x] Lint & tidy up project
 - [x] Fix Shift-tab so it goes from 2 to 1 and not from 2 to new
-- [ ] Work out how to add reelase notes to Sparkle window
+- [ ] Work out how to add release notes to Sparkle window
 
 ## Sparkle process
 
