@@ -24,11 +24,10 @@ class AppState: ObservableObject {
   func debouncedSave() {
     self.saveTask?.cancel()
 
-    let task = DispatchWorkItem { [weak self] in
+    let task = DispatchWorkItem { [todos, weak self] in
       DispatchQueue.global(qos: .background).async { [weak self] in
-        print("Saving after debounce")
         if let self {
-          self.dataStore.saveTodos(todos: self.todos)
+          self.dataStore.saveTodos(todos: todos)
         }
       }
     }
