@@ -3,6 +3,22 @@
     <channel>
         <title>To-Day</title>
         <item>
+            <title>1.8</title>
+            <pubDate>Fri, 17 Mar 2023 11:13:15 +1000</pubDate>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+				<h2>What's New</h2>
+				<ul>
+					<li>Long todos are wrapped to keep menu reasonably narrow.</li>
+					<li>With luck, the Sparkle updater window will show what's new.</li>
+				</ul>
+			]]>
+			</description>
+            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="13120849" type="application/octet-stream" sparkle:edSignature="QQKtXDkRDHaEddfH+Ymiqrt+MQLr1UYcXIq/AaHKFp2Ow3D7s7/k3SqHl8+qaCValZIi9Q0/XsQc96az1LrGDg=="/>
+        </item>
+        <item>
             <title>1.7</title>
             <pubDate>Mon, 13 Mar 2023 10:14:50 +1000</pubDate>
             <sparkle:version>11</sparkle:version>
@@ -17,14 +33,6 @@
             <sparkle:shortVersionString>1.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="11883976" type="application/octet-stream" sparkle:edSignature="0jKqale7EUHtNNs0dVUtxNnNSrZh91gC6cc9WfjkS0MDTBPCjIlbrPgo/FvVJHUS3PlOdiCYIomurWVX6mjrBg=="/>
-        </item>
-        <item>
-            <title>1.5</title>
-            <pubDate>Mon, 27 Feb 2023 11:15:48 +1000</pubDate>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="6463742" type="application/octet-stream" sparkle:edSignature="eLpeSGy/ymbsIyTvfLT4oBRelMxp7k0G4vmTIs7wwOFqFE0V4fkWRc6AvRfKtm3y2klEocZuD4GpkI2WdLp9Aw=="/>
         </item>
     </channel>
 </rss>

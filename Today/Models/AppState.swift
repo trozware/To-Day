@@ -64,13 +64,9 @@ extension AppState {
       Button {
         self.toggleComplete(todo.id)
       } label: {
-        if todo.isComplete {
-          Text(todo.title)
-            .foregroundColor(.secondary)
-            .strikethrough()
-        } else {
-          Text(todo.title)
-        }
+        Text(todo.wrappedTitle)
+          .foregroundColor(todo.isComplete ? .secondary : .primary)
+          .strikethrough(todo.isComplete ? true : false)
       }
     }
   }
