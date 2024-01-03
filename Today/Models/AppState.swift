@@ -67,6 +67,8 @@ extension AppState {
         Text(todo.wrappedTitle)
           .foregroundColor(todo.isComplete ? .secondary : .primary)
           .strikethrough(todo.isComplete ? true : false)
+          .accessibilityValue(todo.isComplete ? todo.title + " complete" : todo.title)
+          .accessibilityLabel(todo.isComplete ? todo.title : todo.title + "Not complete")
       }
     }
   }

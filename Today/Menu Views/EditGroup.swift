@@ -14,11 +14,14 @@ struct EditGroup: View {
   var body: some View {
     Group {
       Divider()
+        .accessibilityHidden(true)
 
       Button("Edit Todos…") {
         openWindow(id: "edit_todos")
         NSApp.activate(ignoringOtherApps: true)
       }
+      .accessibilityElement()
+      .accessibilityLabel("Edit to dos")
 
       Button("Mark All Complete") {
         appState.markAll(complete: true)

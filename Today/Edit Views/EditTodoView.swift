@@ -25,12 +25,16 @@ struct EditTodoView: View {
             .foregroundColor(.red)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Delete \(todo.title)")
 
         Toggle("", isOn: $todo.isComplete)
           .labelsHidden()
           .padding(.trailing, 6)
           .toggleStyle(.switch)
           .tint(.green)
+          .accessibilityLabel(
+            todo.isComplete ? "\(todo.title) complete" : "\(todo.title) not done yet"
+          )
       }
     }
     .onSubmit {

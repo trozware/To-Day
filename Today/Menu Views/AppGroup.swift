@@ -20,6 +20,7 @@ struct AppGroup: View {
   var body: some View {
     Group {
       Divider()
+        .accessibilityHidden(true)
 
       CheckForUpdatesView(updater: updaterController.updater)
 

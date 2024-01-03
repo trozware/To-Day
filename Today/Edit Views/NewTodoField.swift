@@ -16,6 +16,7 @@ struct NewTodoField: View {
     TextField("", text: $newTitle)
       .labelsHidden()
       .focused($newFieldHasFocus)
+      .accessibilityLabel("Enter new to do and press Return")
       .onSubmit {
         // only works with Return
         if !newTitle.isEmpty {

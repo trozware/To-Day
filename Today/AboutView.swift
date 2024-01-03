@@ -36,6 +36,7 @@ struct AboutView: View {
             .frame(height: 50)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Buy me a coffee")
       }
 
       VStack(spacing: 3) {
@@ -49,6 +50,7 @@ struct AboutView: View {
             .frame(height: 60)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Find me on Mastodon")
 
         Spacer()
 

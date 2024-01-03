@@ -15,6 +15,7 @@ struct SettingsGroup: View {
   var body: some View {
     Group {
       Divider()
+        .accessibilityHidden(true)
 
       Toggle("Completed at End", isOn: appState.$sortCompletedToEnd)
 

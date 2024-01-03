@@ -19,6 +19,7 @@ struct EditView: View {
 
         VStack(alignment: .leading) {
           Text("Enter new todo and press Return:")
+            .accessibilityHidden(true)
           NewTodoField()
         }
       }
