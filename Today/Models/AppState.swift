@@ -17,6 +17,7 @@ class AppState: ObservableObject {
   }
 
   @AppStorage("sortCompletedToEnd") var sortCompletedToEnd = true
+  @AppStorage("deleteCompleted") var deleteCompleted = false
 
   var dataStore = DataStore()
   var saveTask: DispatchWorkItem?
@@ -72,19 +73,19 @@ extension AppState {
   }
 
   var todoButtons: some View {
-//    ForEach(sortedTodos) { todo in
-//      Button {
-//        self.toggleComplete(todo.id)
-//      } label: {
-//        //         Text("\(todo.wrappedTitle) \(todo.isComplete ? " - done" : "")")
-//        Text(todo.wrappedTitle)
-//          .foregroundColor(todo.isComplete ? .secondary : .primary)
-//          .strikethrough(todo.isComplete ? true : false)
-//      }
-//    }
+    //    ForEach(sortedTodos) { todo in
+    //      Button {
+    //        self.toggleComplete(todo.id)
+    //      } label: {
+    //        //         Text("\(todo.wrappedTitle) \(todo.isComplete ? " - done" : "")")
+    //        Text(todo.wrappedTitle)
+    //          .foregroundColor(todo.isComplete ? .secondary : .primary)
+    //          .strikethrough(todo.isComplete ? true : false)
+    //      }
+    //    }
 
     Group {
-      Menu("Incomplete") {
+      if deleteCompleted {
         ForEach(pendingTodos) { todo in
           Button {
             self.toggleComplete(todo.id)
@@ -92,14 +93,28 @@ extension AppState {
             Text(todo.wrappedTitle)
           }
         }
-      }
+      } else {
+        if !pendingTodos.isEmpty {
+          Menu("Incomplete") {
+            ForEach(pendingTodos) { todo in
+              Button {
+                self.toggleComplete(todo.id)
+              } label: {
+                Text(todo.wrappedTitle)
+              }
+            }
+          }
+        }
 
-      Menu("Done") {
-        ForEach(completeTodos) { todo in
-          Button {
-            self.toggleComplete(todo.id)
-          } label: {
-            Text(todo.wrappedTitle)
+        if !completeTodos.isEmpty {
+          Menu("Done") {
+            ForEach(completeTodos) { todo in
+              Button {
+                self.toggleComplete(todo.id)
+              } label: {
+                Text(todo.wrappedTitle)
+              }
+            }
           }
         }
       }
@@ -172,7 +187,11 @@ extension AppState {
       $0.id == id
     }
     if let todoIndex {
-      todos[todoIndex].isComplete.toggle()
+      if deleteCompleted {
+        todos.remove(at: todoIndex)
+      } else {
+        todos[todoIndex].isComplete.toggle()
+      }
     }
   }
 
@@ -180,5 +199,12 @@ extension AppState {
     for index in 0 ..< todos.count {
       todos[index].isComplete = complete
     }
+  }
+
+  func checkForDeleteCompleted() {
+    guard deleteCompleted == true else {
+      return
+    }
+    todos.removeAll { $0.isComplete }
   }
 }

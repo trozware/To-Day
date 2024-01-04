@@ -19,6 +19,11 @@ struct SettingsGroup: View {
 
       Toggle("Completed at End", isOn: appState.$sortCompletedToEnd)
 
+      Toggle("Delete When Done", isOn: appState.$deleteCompleted)
+        .onChange(of: appState.deleteCompleted) { _ in
+          appState.checkForDeleteCompleted()
+        }
+
       Toggle("Launch on Login", isOn: $launchOnLogin)
         .onChange(of: launchOnLogin) { _ in
           toggleLaunchOnLogin()
