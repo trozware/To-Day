@@ -48,6 +48,18 @@ extension AppState {
     }
   }
 
+  var pendingTodos: [Todo] {
+    todos
+      .filter { !$0.isComplete }
+      .sorted(using: KeyPathComparator(\.order))
+  }
+
+  var completeTodos: [Todo] {
+    todos
+      .filter { $0.isComplete }
+      .sorted(using: KeyPathComparator(\.order))
+  }
+
   var allComplete: Bool {
     let totalTodos = todos.count
     let completedTodos = todos.filter { $0.isComplete }.count
@@ -60,15 +72,36 @@ extension AppState {
   }
 
   var todoButtons: some View {
-    ForEach(sortedTodos) { todo in
-      Button {
-        self.toggleComplete(todo.id)
-      } label: {
-        Text(todo.wrappedTitle)
-          .foregroundColor(todo.isComplete ? .secondary : .primary)
-          .strikethrough(todo.isComplete ? true : false)
-          .accessibilityValue(todo.isComplete ? todo.title + " complete" : todo.title)
-          .accessibilityLabel(todo.isComplete ? todo.title : todo.title + "Not complete")
+//    ForEach(sortedTodos) { todo in
+//      Button {
+//        self.toggleComplete(todo.id)
+//      } label: {
+//        //         Text("\(todo.wrappedTitle) \(todo.isComplete ? " - done" : "")")
+//        Text(todo.wrappedTitle)
+//          .foregroundColor(todo.isComplete ? .secondary : .primary)
+//          .strikethrough(todo.isComplete ? true : false)
+//      }
+//    }
+
+    Group {
+      Menu("Incomplete") {
+        ForEach(pendingTodos) { todo in
+          Button {
+            self.toggleComplete(todo.id)
+          } label: {
+            Text(todo.wrappedTitle)
+          }
+        }
+      }
+
+      Menu("Done") {
+        ForEach(completeTodos) { todo in
+          Button {
+            self.toggleComplete(todo.id)
+          } label: {
+            Text(todo.wrappedTitle)
+          }
+        }
       }
     }
   }
