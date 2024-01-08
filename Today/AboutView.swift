@@ -23,7 +23,7 @@ struct AboutView: View {
 
       Text("Use the **Edit Todos…** menu item to add, delete and edit your todos. Select them in the menu to mark them as complete or incomplete.")
 
-      Text("There are only two settings: **Complete at End** sorts the list in the menu, moving the completed todos to the end and **Launch on Login** sets whether you want the app to start automatically when you log in.")
+      Text("There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in.")
 
       VStack(spacing: 3) {
         Text("This app is free, but if you'd like to support it, please:")

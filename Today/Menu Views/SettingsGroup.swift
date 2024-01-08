@@ -17,12 +17,17 @@ struct SettingsGroup: View {
       Divider()
         .accessibilityHidden(true)
 
-      Toggle("Completed at End", isOn: appState.$sortCompletedToEnd)
-
-      Toggle("Delete When Done", isOn: appState.$deleteCompleted)
-        .onChange(of: appState.deleteCompleted) { _ in
+      Picker("Show Completed", selection: $appState.completeHandling) {
+        Text("Strike through").tag(Completes.doNothing)
+        Text("Sort to the End").tag(Completes.sortToEnd)
+        Text("Move to Submenu").tag(Completes.moveToSubMenu)
+        Text("Hide from Menu").tag(Completes.hide)
+        Text("Delete Immediately").tag(Completes.delete)
+      }.onChange(of: appState.completeHandling) { _ in
+        if appState.completeHandling == .delete {
           appState.checkForDeleteCompleted()
         }
+      }
 
       Toggle("Launch on Login", isOn: $launchOnLogin)
         .onChange(of: launchOnLogin) { _ in

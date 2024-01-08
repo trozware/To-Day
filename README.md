@@ -6,7 +6,7 @@ Every app I found had a terrific list of features, most of which I didn't want, 
 
 Use the **Edit Todos…** menu item to add, delete, edit and move your todos. Select them in the menu to mark them as complete or incomplete.
 
-There are only two settings: **Complete at End** sorts the list in the menu, moving the completed todos to the end and **Launch on Login** sets whether you want the app to start automatically when you log in.
+There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in.
 
 This app is free, but if you'd like to support my work, please [Buy Me a Coffee](https://ko-fi.com/H2H3BU7SI).
 
@@ -20,6 +20,8 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - [x] Lint & tidy up project
 - [x] Fix Shift-tab so it goes from 2 to 1 and not from 2 to new
 - [x] Work out how to add release notes to Sparkle window
+- [ ] VoiceOver - not yet possible to set VocieOver text in menus
+- [x] More completion options
 
 ## Sparkle process
 
@@ -31,8 +33,8 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - Set name to To-Day.dmg and move to Releases folder
 - Show Sparkle folder in Finder
 - Open Terminal at `artifacts` folder in the level above Sparkle
-- `cd` into `sparkle` folder
-- Run `./bin/generate_appcast /path/to/Releases`
+- `cd` into `sparkle/Sparkle` folder
+- Run `./bin/generate_appcast /path/to/Releases` (I had trouble with this and had to drag the generate_appcast file into the terminal window to access it.)
 - Edit Releases/appcast.xml to include release notes (copy format from previous)
 - Push to repo
 - Run old version and test update process (errors appear in Console)
