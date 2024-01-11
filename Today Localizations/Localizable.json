@@ -1,0 +1,102 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ complete" : {
+
+    },
+    "%@ not done yet" : {
+
+    },
+    "About To-Day" : {
+
+    },
+    "About To-Day…" : {
+
+    },
+    "Buy me a coffee" : {
+
+    },
+    "Check for Updates…" : {
+
+    },
+    "Completed" : {
+
+    },
+    "Delete %@" : {
+
+    },
+    "Delete All" : {
+
+    },
+    "Delete Immediately" : {
+
+    },
+    "Edit to dos" : {
+
+    },
+    "Edit Todos" : {
+
+    },
+    "Edit Todos…" : {
+
+    },
+    "Enter new to do and press Return" : {
+
+    },
+    "Enter new todo and press Return:" : {
+
+    },
+    "Every app I found had a terrific list of features, most of which I didn't want, so I wrote my own." : {
+
+    },
+    "Find me on Mastodon" : {
+
+    },
+    "Hide from Menu" : {
+
+    },
+    "I wanted a very simple menubar app that showed a list of items that I could check off over the day. Nothing long term, just day-by-day." : {
+
+    },
+    "If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social/@troz) on Mastodon:" : {
+
+    },
+    "Launch on Login" : {
+
+    },
+    "Mark All Complete" : {
+
+    },
+    "Mark All Incomplete" : {
+
+    },
+    "Move to Submenu" : {
+
+    },
+    "No completed todos." : {
+
+    },
+    "Quit To-Day" : {
+
+    },
+    "Show Completed" : {
+
+    },
+    "Sort to the End" : {
+
+    },
+    "Strike through" : {
+
+    },
+    "There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in." : {
+
+    },
+    "This app is free, but if you'd like to support it, please:" : {
+
+    },
+    "Use the **Edit Todos…** menu item to add, delete and edit your todos. Select them in the menu to mark them as complete or incomplete." : {
+
+    }
+  },
+  "version" : "1.0"
+}

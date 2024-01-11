@@ -1,0 +1,102 @@
+{
+  "sourceLanguage" : "de",
+  "strings" : {
+    "%@ abgeschlossen" : {
+
+    },
+    "%@ noch nicht abgeschlossen" : {
+
+    },
+    "Über To-Day" : {
+
+    },
+    "Über To-Day…" : {
+
+    },
+    "Kauf mir einen Kaffee" : {
+
+    },
+    "Auf Aktualisierungen prüfen …" : {
+
+    },
+    "abgeschlossen" : {
+
+    },
+    "Lösche %@" : {
+
+    },
+    "Alle löschen" : {
+
+    },
+    "Sofort löschen" : {
+
+    },
+    "Einträge bearbeiten" : {
+
+    },
+    "Einträge bearbeiten" : {
+
+    },
+    "Einträge bearbeiten …" : {
+
+    },
+    "Erstelle einen Eintrag und drücke die Enter-Taste" : {
+
+    },
+    "Erstelle einen Eintrag und drücke die Enter-Taste:" : {
+
+    },
+    "Jede App, die ich fand, hatte eine tolle Liste von Funktionen, von denen ich die meisten nicht wollte, also habe ich meine eigene geschrieben." : {
+
+    },
+    "Finde mich auf Mastodon" : {
+
+    },
+    "Aus Menü ausblenden" : {
+
+    },
+    "Ich wollte eine sehr einfache Menüleisten-App, die eine Liste von Elementen anzeigt, die ich im Laufe des Tages abhaken kann. Nichts Langfristiges, nur Tag für Tag." : {
+
+    },
+    "Wenn du mich kontaktieren möchtest, ich bin @troz@mastodon.social](https://mastodon.social/@troz) auf Mastodon:" : {
+
+    },
+    "Bei Anmeldung starten" : {
+
+    },
+    "Alle als abgeschlossen markieren" : {
+
+    },
+    "Alle als nicht abgeschlossen markieren" : {
+
+    },
+    "Zum Untermenü wechseln" : {
+
+    },
+    "Keine abgeschlossenen Einträge." : {
+
+    },
+    "Beende To-Day" : {
+
+    },
+    "Abgeschlossene anzeigen" : {
+
+    },
+    "An das Ende sortieren" : {
+
+    },
+    "Durchschlagen" : {
+
+    },
+    "Es gibt nur zwei Einstellungen: Mit **Abgeschlossene anzeigen** kannst du auswählen, wie die abgeschlossenen Aufgaben angezeigt, ausgeblendet oder gelöscht werden sollen, und mit **Bei Anmeldung starten** legst du fest, ob die App automatisch gestartet werden soll, wenn du dich anmeldest." : {
+
+    },
+    "Diese App ist kostenlos, aber wenn du unterstützen möchtest, gehe bitte wie folgt vor:" : {
+
+    },
+    "Verwende den Menüpunkt **Einträge bearbeiten…**, um etwas hinzuzufügen, zu löschen und zu bearbeiten. Markiere im Menü einen Eintrag, um ihn als abgeschlossen oder nicht abgeschlossen zu markieren." : {
+
+    }
+  },
+  "Version" : "1.0"
+}

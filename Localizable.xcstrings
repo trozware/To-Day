@@ -1,0 +1,336 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%@ complete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ abgeschlossen"
+          }
+        }
+      }
+    },
+    "%@ not done yet" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ noch nicht abgeschlossen"
+          }
+        }
+      }
+    },
+    "About To-Day" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über To-Day"
+          }
+        }
+      }
+    },
+    "About To-Day…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über To-Day…"
+          }
+        }
+      }
+    },
+    "Buy me a coffee" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kauf mir einen Kaffee"
+          }
+        }
+      }
+    },
+    "Check for Updates…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf Aktualisierungen prüfen …"
+          }
+        }
+      }
+    },
+    "Completed" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abgeschlossen"
+          }
+        }
+      }
+    },
+    "Delete %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche %@"
+          }
+        }
+      }
+    },
+    "Delete All" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle löschen"
+          }
+        }
+      }
+    },
+    "Delete Immediately" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sofort löschen"
+          }
+        }
+      }
+    },
+    "Edit to dos" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einträge bearbeiten"
+          }
+        }
+      }
+    },
+    "Edit Todos" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einträge bearbeiten"
+          }
+        }
+      }
+    },
+    "Edit Todos…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einträge bearbeiten…"
+          }
+        }
+      }
+    },
+    "Enter new to do and press Return" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstelle einen Eintrag und drücke die Enter-Taste"
+          }
+        }
+      }
+    },
+    "Enter new todo and press Return:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstelle einen Eintrag und drücke die Enter-Taste:"
+          }
+        }
+      }
+    },
+    "Every app I found had a terrific list of features, most of which I didn't want, so I wrote my own." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jede App, die ich fand, hatte eine tolle Liste von Funktionen, von denen ich die meisten nicht wollte, also habe ich meine eigene geschrieben."
+          }
+        }
+      }
+    },
+    "Find me on Mastodon" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finde mich auf Mastodon"
+          }
+        }
+      }
+    },
+    "Hide from Menu" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Menü ausblenden"
+          }
+        }
+      }
+    },
+    "I wanted a very simple menubar app that showed a list of items that I could check off over the day. Nothing long term, just day-by-day." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich wollte eine sehr einfache Menüleisten-App, die eine Liste von Elementen anzeigt, die ich im Laufe des Tages abhaken kann. Nichts Langfristiges, nur Tag für Tag."
+          }
+        }
+      }
+    },
+    "If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social/@troz) on Mastodon:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du mich kontaktieren möchtest, ich bin [@troz@mastodon.social](https://mastodon.social/@troz) auf Mastodon:"
+          }
+        }
+      }
+    },
+    "Launch on Login" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei Anmeldung starten"
+          }
+        }
+      }
+    },
+    "Mark All Complete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle als abgeschlossen markieren"
+          }
+        }
+      }
+    },
+    "Mark All Incomplete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle als nicht abgeschlossen markieren"
+          }
+        }
+      }
+    },
+    "Move to Submenu" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zum Untermenü wechseln"
+          }
+        }
+      }
+    },
+    "No completed todos." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine abgeschlossenen Einträge."
+          }
+        }
+      }
+    },
+    "Quit To-Day" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beende To-Day"
+          }
+        }
+      }
+    },
+    "Show Completed" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abgeschlossene anzeigen"
+          }
+        }
+      }
+    },
+    "Sort to the End" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An das Ende sortieren"
+          }
+        }
+      }
+    },
+    "Strike through" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durchschlagen"
+          }
+        }
+      }
+    },
+    "There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es gibt nur zwei Einstellungen: Mit **Abgeschlossene anzeigen** kannst du auswählen, wie die abgeschlossenen Aufgaben angezeigt, ausgeblendet oder gelöscht werden sollen, und mit **Bei Anmeldung starten** legst du fest, ob die App automatisch gestartet werden soll, wenn du dich anmeldest."
+          }
+        }
+      }
+    },
+    "This app is free, but if you'd like to support it, please:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App ist kostenlos, aber wenn du unterstützen möchtest, gehe bitte wie folgt vor:"
+          }
+        }
+      }
+    },
+    "Use the **Edit Todos…** menu item to add, delete and edit your todos. Select them in the menu to mark them as complete or incomplete." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwende den Menüpunkt **Einträge bearbeiten…**, um etwas hinzuzufügen, zu löschen und zu bearbeiten. Markiere im Menü einen Eintrag, um ihn als abgeschlossen oder nicht abgeschlossen zu markieren."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

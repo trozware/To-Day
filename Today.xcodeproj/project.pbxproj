@@ -19,6 +19,7 @@
 		2675DBEC2974BA6500492B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEB2974BA6500492B03 /* Assets.xcassets */; };
 		2675DBEF2974BA6500492B03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */; };
 		26B83F582B4B6FCF0002381F /* Completes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B83F572B4B6FCF0002381F /* Completes.swift */; };
+		26B83F5A2B4B824D0002381F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26B83F592B4B824D0002381F /* Localizable.xcstrings */; };
 		26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC9AF0297A100700E19AA3 /* AppState.swift */; };
 		26D823992978CA960051859E /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 26D823982978CA960051859E /* Sparkle */; };
 		26D8239B2978CAE70051859E /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8239A2978CAE70051859E /* Updater.swift */; };
@@ -43,6 +44,7 @@
 		2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2675DBF02974BA6500492B03 /* Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Today.entitlements; sourceTree = "<group>"; };
 		26B83F572B4B6FCF0002381F /* Completes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completes.swift; sourceTree = "<group>"; };
+		26B83F592B4B824D0002381F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		26BC9AF0297A100700E19AA3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		26D8239A2978CAE70051859E /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		26D8239C2978CD120051859E /* To-Day-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "To-Day-Info.plist"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		2675DBDB2974BA6500492B03 = {
 			isa = PBXGroup;
 			children = (
+				26B83F592B4B824D0002381F /* Localizable.xcstrings */,
 				2675DBE62974BA6500492B03 /* Today */,
 				2604F4E42978D9F40036A5BA /* README.md */,
 				2604F4E52978DFBF0036A5BA /* .gitignore */,
@@ -169,7 +172,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					2675DBE32974BA6500492B03 = {
 						CreatedOnToolsVersion = 14.2;
@@ -183,6 +186,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 2675DBDB2974BA6500492B03;
 			packageReferences = (
@@ -204,6 +208,7 @@
 			files = (
 				2675DBEF2974BA6500492B03 /* Preview Assets.xcassets in Resources */,
 				2675DBEC2974BA6500492B03 /* Assets.xcassets in Resources */,
+				26B83F5A2B4B824D0002381F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -321,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -380,7 +387,7 @@
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Today/Preview Content\"";
 				DEVELOPMENT_TEAM = TC28MCLCFA;
@@ -397,7 +404,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.9.1;
+				MARKETING_VERSION = 1.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -413,7 +420,7 @@
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Today/Preview Content\"";
 				DEVELOPMENT_TEAM = TC28MCLCFA;
@@ -430,7 +437,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.9.1;
+				MARKETING_VERSION = 1.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
