@@ -112,7 +112,7 @@ extension AppState {
   }
 
   var menuTitle: some View {
-    let title: String
+    let title: LocalizedStringKey
     let imageName: String
 
     let totalTodos = todos.count

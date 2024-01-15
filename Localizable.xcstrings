@@ -321,6 +321,62 @@
         }
       }
     },
+    "To-Day" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To-Day"
+          }
+        }
+      }
+    },
+    "To-Day: %lld of %lld done" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To-Day: %1$lld von %2$lld abgeschlossen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "To-Day: %1$lld of %2$lld done"
+          }
+        }
+      }
+    },
+    "To-Day: %lld remaining" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To-Day: %lld übrig"
+          }
+        }
+      }
+    },
+    "To-Day: complete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To-Day: Fertig"
+          }
+        }
+      }
+    },
+    "Translation and VoiceOver help by [Sebastian Dellit](www.blindzeln.org)." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersetzung und VoiceOver Hilfe durch [Sebastian Dellit](www.blindzeln.org)."
+          }
+        }
+      }
+    },
     "Use the **Edit Todos…** menu item to add, delete and edit your todos. Select them in the menu to mark them as complete or incomplete." : {
       "localizations" : {
         "de" : {

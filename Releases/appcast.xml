@@ -3,6 +3,20 @@
     <channel>
         <title>To-Day</title>
         <item>
+            <title>1.9.3</title>
+            <pubDate>Mon, 15 Jan 2024 14:48:09 +1000</pubDate>
+            <sparkle:version>17</sparkle:version>
+            <sparkle:shortVersionString>1.9.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+				<h2>What's New</h2>
+				<ul>
+					<li>German localisation by <a href="www.blindzeln.org">Sebastian Dellit</a>.</li>
+				</ul>
+			]]></description>
+            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="12293576" type="application/octet-stream" sparkle:edSignature="tQSiZw4hI4UdjIAXKBUQgLSYKQlVaOQsjYZITESkIw3hxhmwuXxEDpPTgh0pwKvZ0PSAC4ZFQKjv57lD4hg0BA=="/>
+        </item>
+        <item>
             <title>1.9.1</title>
             <pubDate>Mon, 08 Jan 2024 10:51:28 +1000</pubDate>
             <sparkle:version>15</sparkle:version>
@@ -31,14 +45,6 @@
 				</ul>
 			]]></description>
             <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="13120849" type="application/octet-stream" sparkle:edSignature="QQKtXDkRDHaEddfH+Ymiqrt+MQLr1UYcXIq/AaHKFp2Ow3D7s7/k3SqHl8+qaCValZIi9Q0/XsQc96az1LrGDg=="/>
-        </item>
-        <item>
-            <title>1.7</title>
-            <pubDate>Mon, 13 Mar 2023 10:14:50 +1000</pubDate>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>1.7</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="11806152" type="application/octet-stream" sparkle:edSignature="buSOGFEJVcA+50XbMiGFNmuSPuCut2HlrO+ud0jhWXVDxWOvtPiaRGGntWPRDL4AB4AUCqkEjqjF1/b2P7TJBA=="/>
         </item>
     </channel>
 </rss>

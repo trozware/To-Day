@@ -22,20 +22,22 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - [x] Work out how to add release notes to Sparkle window
 - [ ] VoiceOver - not yet possible to set VocieOver text in menus
 - [x] More completion options
+- [x] German localisation
+- [ ] More Localisations
 
 ## Sparkle process
 
 - Archive app
-- Distribute using Developer ID, using Apple notary service
-- Export notarised app and copy into read-write DMG
+- Distribute for Direct Distribution, using Apple notary service
+- Mount read-write DMG, export notarised app and copy into read-write DMG
 - Configure DMG window as required
 - Eject DMG and use Disk Utility to convert to read-only
 - Set name to To-Day.dmg and move to Releases folder
 - Show Sparkle folder in Finder
 - Open Terminal at `artifacts` folder in the level above Sparkle
 - `cd` into `sparkle/Sparkle` folder
-- Run `./bin/generate_appcast /path/to/Releases` (I had trouble with this and had to drag the generate_appcast file into the terminal window to access it.)
+- Run `./bin/generate_appcast /path/to/Releases`
 - Edit Releases/appcast.xml to include release notes (copy format from previous)
 - Push to repo
 - Run old version and test update process (errors appear in Console)
-- update Releases in GitHub
+- Create a git tag like 'release-1.1.1', push tag to GitHub and update Releases to make it the latest.

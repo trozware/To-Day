@@ -25,6 +25,8 @@ struct AboutView: View {
 
       Text("There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in.")
 
+      Text("Translation and VoiceOver help by [Sebastian Dellit](www.blindzeln.org).")
+
       VStack(spacing: 3) {
         Text("This app is free, but if you'd like to support it, please:")
         Button {
