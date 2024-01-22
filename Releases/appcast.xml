@@ -3,6 +3,19 @@
     <channel>
         <title>To-Day</title>
         <item>
+            <title>1.9.4</title>
+            <pubDate>Mon, 22 Jan 2024 11:50:14 +1000</pubDate>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>1.9.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <h2>What's New</h2>
+				<ul>
+					<li>VoiceOver improvements.</li>
+					<li>German localisation by Sebastian Dellit: www.blindzeln.org</li>
+				</ul>
+            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="13120849" type="application/octet-stream" sparkle:edSignature="R6o8lOvjcyduL51vYDsazIcYAwMyTWzwnH+Nr3MdXeCoX46Ce+RwFZNSGuiOvk3kdPUHNgZASQUiR02srmuvAw=="/>
+        </item>
+        <item>
             <title>1.9.3</title>
             <pubDate>Mon, 15 Jan 2024 14:48:09 +1000</pubDate>
             <sparkle:version>17</sparkle:version>
@@ -30,21 +43,6 @@
 				</ul>
 			]]></description>
             <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="12961105" type="application/octet-stream" sparkle:edSignature="aq4WY9P8EjtN9XwUmeq/sr01jb3WgBjHQvE4EAPagcp+kSLhdIwwctlQK1+wQtz+eRHC7ncRH2mQgaBLxKG4Ag=="/>
-        </item>
-        <item>
-            <title>1.8</title>
-            <pubDate>Fri, 17 Mar 2023 11:13:15 +1000</pubDate>
-            <sparkle:version>12</sparkle:version>
-            <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[
-				<h2>What's New</h2>
-				<ul>
-					<li>Long todos are wrapped to keep menu reasonably narrow.</li>
-					<li>With luck, the Sparkle updater window will show what's new.</li>
-				</ul>
-			]]></description>
-            <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="13120849" type="application/octet-stream" sparkle:edSignature="QQKtXDkRDHaEddfH+Ymiqrt+MQLr1UYcXIq/AaHKFp2Ow3D7s7/k3SqHl8+qaCValZIi9Q0/XsQc96az1LrGDg=="/>
         </item>
     </channel>
 </rss>
