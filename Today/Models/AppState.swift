@@ -113,6 +113,7 @@ extension AppState {
 
   var menuTitle: some View {
     let title: LocalizedStringKey
+    let accessTitle: LocalizedStringKey
     let imageName: String
 
     let totalTodos = todos.count
@@ -121,9 +122,11 @@ extension AppState {
     if totalTodos == 0 {
       title = "To-Day"
       imageName = "list.bullet.clipboard"
+      accessTitle = ""
     } else if completedTodos == totalTodos {
       title = "To-Day: complete"
       imageName = "checklist.checked"
+      accessTitle = "complete"
     } else if completeHandling == .delete {
       title = "To-Day: \(totalTodos) remaining"
       if completedTodos == 0 {
@@ -131,6 +134,7 @@ extension AppState {
       } else {
         imageName = "checklist"
       }
+      accessTitle = "\(totalTodos) remaining"
     } else {
       title = "To-Day: \(completedTodos) of \(totalTodos) done"
       if completedTodos == 0 {
@@ -138,12 +142,14 @@ extension AppState {
       } else {
         imageName = "checklist"
       }
+      accessTitle = "\(completedTodos) of \(totalTodos) done"
     }
 
     return HStack {
       Image(systemName: imageName)
       Text(title).monospacedDigit()
     }
+    .accessibilityLabel(accessTitle)
   }
 }
 
