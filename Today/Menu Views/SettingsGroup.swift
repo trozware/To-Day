@@ -23,7 +23,18 @@ struct SettingsGroup: View {
         Text("Move to Submenu").tag(Completes.moveToSubMenu)
         Text("Hide from Menu").tag(Completes.hide)
         Text("Delete Immediately").tag(Completes.delete)
-      }.onChange(of: appState.completeHandling) { _ in
+      }
+      .onChange(of: appState.completeHandling) { _ in
+        if appState.completeHandling == .delete {
+          appState.checkForDeleteCompleted()
+        }
+      }
+
+      Picker("Sort Todos", selection: $appState.todoSorting) {
+        Text("By Creation Date").tag(Sorts.dateTime)
+        Text("By Title").tag(Sorts.alpha)
+      }
+      .onChange(of: appState.todoSorting) { _ in
         if appState.completeHandling == .delete {
           appState.checkForDeleteCompleted()
         }

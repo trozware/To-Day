@@ -15,6 +15,7 @@
 		262623E72977C371001F9610 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262623E62977C371001F9610 /* AboutView.swift */; };
 		266E9C6A299DF224003CC545 /* EditTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E9C69299DF224003CC545 /* EditTodoView.swift */; };
 		266E9C6C299DF279003CC545 /* NewTodoField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E9C6B299DF279003CC545 /* NewTodoField.swift */; };
+		267402D72C9BA1E6005FEC8B /* Sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267402D62C9BA1E5005FEC8B /* Sorts.swift */; };
 		2675DBE82974BA6500492B03 /* TodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2675DBE72974BA6500492B03 /* TodayApp.swift */; };
 		2675DBEC2974BA6500492B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEB2974BA6500492B03 /* Assets.xcassets */; };
 		2675DBEF2974BA6500492B03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2675DBEE2974BA6500492B03 /* Preview Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		262623E62977C371001F9610 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		266E9C69299DF224003CC545 /* EditTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTodoView.swift; sourceTree = "<group>"; };
 		266E9C6B299DF279003CC545 /* NewTodoField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoField.swift; sourceTree = "<group>"; };
+		267402D62C9BA1E5005FEC8B /* Sorts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorts.swift; sourceTree = "<group>"; };
 		2675DBE42974BA6500492B03 /* To-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2675DBE72974BA6500492B03 /* TodayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayApp.swift; sourceTree = "<group>"; };
 		2675DBEB2974BA6500492B03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				26F2268B29762D2A00EDBEF3 /* Todo.swift */,
 				26F2268D2976347000EDBEF3 /* DataStore.swift */,
 				26B83F572B4B6FCF0002381F /* Completes.swift */,
+				267402D62C9BA1E5005FEC8B /* Sorts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,7 +175,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					2675DBE32974BA6500492B03 = {
 						CreatedOnToolsVersion = 14.2;
@@ -246,6 +249,7 @@
 				262051CB29A0B9A2008BAFD0 /* AppGroup.swift in Sources */,
 				26BC9AF1297A100700E19AA3 /* AppState.swift in Sources */,
 				26F2268C29762D2A00EDBEF3 /* Todo.swift in Sources */,
+				267402D72C9BA1E6005FEC8B /* Sorts.swift in Sources */,
 				266E9C6A299DF224003CC545 /* EditTodoView.swift in Sources */,
 				262623E52977A8B6001F9610 /* EditView.swift in Sources */,
 				266E9C6C299DF279003CC545 /* NewTodoField.swift in Sources */,
@@ -264,6 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -327,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -408,6 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -441,6 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.troz.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

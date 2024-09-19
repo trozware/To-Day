@@ -17,6 +17,7 @@ class AppState: ObservableObject {
   }
 
   @AppStorage("completeHandling") var completeHandling = Completes.sortToEnd
+  @AppStorage("todoSorting") var todoSorting = Sorts.dateTime
 
   var dataStore = DataStore()
   var saveTask: DispatchWorkItem?
@@ -40,16 +41,33 @@ class AppState: ObservableObject {
 // MARK: - Computed Properties
 
 extension AppState {
-  var sortedTodos: [Todo] {
+  var sortedCompleteTodos: [Todo] {
+    var completeTodos = todos.filter { $0.isComplete }
+    switch todoSorting {
+    case .dateTime:
+      completeTodos = completeTodos.sorted(using: KeyPathComparator(\.order))
+    case .alpha:
+      completeTodos = completeTodos.sorted(using: KeyPathComparator(\.title))
+    }
+
     switch completeHandling {
     case .doNothing, .moveToSubMenu:
-      return todos.sorted(using: KeyPathComparator(\.order))
+      return completeTodos.sorted(using: KeyPathComparator(\.order))
     case .sortToEnd:
-      return todos.sorted(using: KeyPathComparator(\.sortProperty))
+      return completeTodos.sorted(using: KeyPathComparator(\.sortProperty))
     case .hide, .delete:
-      return todos
-        .filter { !$0.isComplete }
-        .sorted(using: KeyPathComparator(\.order))
+      return []
+    }
+  }
+
+  var sortedPendingTodos: [Todo] {
+    let pendingTodos = todos.filter { !$0.isComplete }
+
+    switch todoSorting {
+    case .dateTime:
+      return pendingTodos.sorted(using: KeyPathComparator(\.order))
+    case .alpha:
+      return pendingTodos.sorted(using: KeyPathComparator(\.title))
     }
   }
 
@@ -65,11 +83,11 @@ extension AppState {
   }
 
   var todoButtons: some View {
-    Group {
-      if completeHandling == .moveToSubMenu {
-        let pendingTodos = sortedTodos.filter { !$0.isComplete }
-        let completeTodos = sortedTodos.filter { $0.isComplete }
+    let pendingTodos = sortedPendingTodos
+    let completeTodos = sortedCompleteTodos
 
+    return Group {
+      if completeHandling == .moveToSubMenu {
         if !pendingTodos.isEmpty {
           ForEach(pendingTodos) { todo in
             Button {
@@ -98,7 +116,7 @@ extension AppState {
         }
 
       } else {
-        ForEach(sortedTodos) { todo in
+        ForEach(pendingTodos + completeTodos) { todo in
           Button {
             self.toggleComplete(todo.id)
           } label: {

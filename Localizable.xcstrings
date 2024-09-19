@@ -87,6 +87,12 @@
         }
       }
     },
+    "By Creation Date" : {
+
+    },
+    "By Title" : {
+
+    },
     "Check for Updates…" : {
       "localizations" : {
         "de" : {
@@ -326,6 +332,9 @@
           }
         }
       }
+    },
+    "Sort Todos" : {
+
     },
     "Strike through" : {
       "localizations" : {
