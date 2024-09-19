@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Sorts: String, CaseIterable {
+enum Sorts: String {
   case dateTime = "Sort by Creation Date"
   case alpha = "Sort by Name"
 }

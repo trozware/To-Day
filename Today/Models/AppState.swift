@@ -41,88 +41,100 @@ class AppState: ObservableObject {
 // MARK: - Computed Properties
 
 extension AppState {
-  var sortedCompleteTodos: [Todo] {
-    var completeTodos = todos.filter { $0.isComplete }
-    switch todoSorting {
-    case .dateTime:
-      completeTodos = completeTodos.sorted(using: KeyPathComparator(\.order))
-    case .alpha:
-      completeTodos = completeTodos.sorted(using: KeyPathComparator(\.title))
-    }
+  var sortedTodosForMainMenu: [Todo] {
+    let sorted = todos
+    let sorter = todoSorting == .dateTime
+    ? KeyPathComparator(\Todo.order)
+    : KeyPathComparator(\Todo.title)
 
     switch completeHandling {
-    case .doNothing, .moveToSubMenu:
-      return completeTodos.sorted(using: KeyPathComparator(\.order))
+    case .strikeThrough:
+      return sorted.sorted(using: sorter)
     case .sortToEnd:
-      return completeTodos.sorted(using: KeyPathComparator(\.sortProperty))
-    case .hide, .delete:
-      return []
+      return sorted
+        .sorted {
+          $0.sortFactor(sortType: todoSorting) < $1.sortFactor(sortType: todoSorting)
+        }
+    case .hide, .delete, .moveToSubMenu:
+      return sorted.filter { !$0.isComplete }.sorted(using: sorter)
     }
   }
 
-  var sortedPendingTodos: [Todo] {
+  var sortedCompleteTodosForSubmenu: [Todo] {
+    let completeTodos = todos.filter { $0.isComplete }
+
+    let sorter = todoSorting == .dateTime
+    ? KeyPathComparator(\Todo.order)
+    : KeyPathComparator(\Todo.title)
+
+    return completeTodos.sorted(using: sorter)
+  }
+
+  var sortedPendingTodosForSubMenu: [Todo] {
     let pendingTodos = todos.filter { !$0.isComplete }
 
-    switch todoSorting {
-    case .dateTime:
-      return pendingTodos.sorted(using: KeyPathComparator(\.order))
-    case .alpha:
-      return pendingTodos.sorted(using: KeyPathComparator(\.title))
-    }
+    let sorter = todoSorting == .dateTime
+    ? KeyPathComparator(\Todo.order)
+    : KeyPathComparator(\Todo.title)
+
+    return pendingTodos.sorted(using: sorter)
   }
 
   var allComplete: Bool {
     let totalTodos = todos.count
-    let completedTodos = todos.filter { $0.isComplete }.count
+    let completedTodos = todos.count { $0.isComplete }
     return totalTodos == completedTodos
   }
 
   var allIncomplete: Bool {
-    let completedTodos = todos.filter { $0.isComplete }.count
+    let completedTodos = todos.count { $0.isComplete }
     return completedTodos == 0
   }
 
+  @ViewBuilder
   var todoButtons: some View {
-    let pendingTodos = sortedPendingTodos
-    let completeTodos = sortedCompleteTodos
-
-    return Group {
-      if completeHandling == .moveToSubMenu {
-        if !pendingTodos.isEmpty {
-          ForEach(pendingTodos) { todo in
-            Button {
-              self.toggleComplete(todo.id)
-            } label: {
-              Text(todo.wrappedTitle)
-            }
-          }
+    if completeHandling == .moveToSubMenu {
+      todosPlusSubmenu
+    } else {
+      ForEach(sortedTodosForMainMenu) { todo in
+        Button {
+          self.toggleComplete(todo.id)
+        } label: {
+          Text(todo.wrappedTitle)
+            .foregroundColor(todo.isComplete ? .secondary : .primary)
+            .strikethrough(todo.isComplete ? true : false)
         }
+      }
+    }
+  }
 
-        Menu("Completed") {
-          if completeTodos.isEmpty {
-            Button {} label: {
-              Text("No completed todos.")
-            }
-            .disabled(true)
-          } else {
-            ForEach(completeTodos) { todo in
-              Button {
-                self.toggleComplete(todo.id)
-              } label: {
-                Text(todo.wrappedTitle)
-              }
-            }
-          }
+  @ViewBuilder
+  var todosPlusSubmenu: some View {
+    let pendingTodos = sortedPendingTodosForSubMenu
+    let completeTodos = sortedCompleteTodosForSubmenu
+
+    if !pendingTodos.isEmpty {
+      ForEach(pendingTodos) { todo in
+        Button {
+          self.toggleComplete(todo.id)
+        } label: {
+          Text(todo.wrappedTitle)
         }
+      }
+    }
 
+    Menu("Completed") {
+      if completeTodos.isEmpty {
+        Button {} label: {
+          Text("No completed todos.")
+        }
+        .disabled(true)
       } else {
-        ForEach(pendingTodos + completeTodos) { todo in
+        ForEach(completeTodos) { todo in
           Button {
             self.toggleComplete(todo.id)
           } label: {
             Text(todo.wrappedTitle)
-              .foregroundColor(todo.isComplete ? .secondary : .primary)
-              .strikethrough(todo.isComplete ? true : false)
           }
         }
       }

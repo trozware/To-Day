@@ -18,7 +18,7 @@ struct SettingsGroup: View {
         .accessibilityHidden(true)
 
       Picker("Show Completed", selection: $appState.completeHandling) {
-        Text("Strike through").tag(Completes.doNothing)
+        Text("Strike through").tag(Completes.strikeThrough)
         Text("Sort to the End").tag(Completes.sortToEnd)
         Text("Move to Submenu").tag(Completes.moveToSubMenu)
         Text("Hide from Menu").tag(Completes.hide)
@@ -31,7 +31,7 @@ struct SettingsGroup: View {
       }
 
       Picker("Sort Todos", selection: $appState.todoSorting) {
-        Text("By Creation Date").tag(Sorts.dateTime)
+        Text("By Date & Time").tag(Sorts.dateTime)
         Text("By Title").tag(Sorts.alpha)
       }
       .onChange(of: appState.todoSorting) { _ in

@@ -13,10 +13,6 @@ struct Todo: Identifiable, Equatable, Hashable, Codable {
   var title: String
   var isComplete = false
 
-  var sortProperty: Int {
-    order + (isComplete ? 10000 : 0)
-  }
-
   var wrappedTitle: String {
     let words = title.components(separatedBy: .whitespaces)
     var wrapped: [String] = [""]
@@ -38,6 +34,15 @@ struct Todo: Identifiable, Equatable, Hashable, Codable {
 
     let wrappedString = wrapped.joined(separator: "\n").trimmingCharacters(in: .whitespaces)
     return wrappedString
+  }
+
+  func sortFactor(sortType: Sorts) -> Int {
+    if sortType == .dateTime {
+      return order + (isComplete ? 10000 : 0)
+    } else {
+      let firstLetterValue = title.lowercased().first?.unicodeScalars.first?.value ?? 97
+      return Int(firstLetterValue) + (isComplete ? 10000 : 0)
+    }
   }
 }
 
