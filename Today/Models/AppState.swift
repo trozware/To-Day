@@ -200,7 +200,7 @@ extension AppState {
     }
   }
 
-  func deleteAll() {
+  func deleteAllWithConfirmation() {
     let alert = NSAlert()
     alert.alertStyle = .warning
     alert.messageText = "Really delete all the todos?"
@@ -213,6 +213,10 @@ extension AppState {
     if response == .alertFirstButtonReturn {
       todos = []
     }
+  }
+
+  func deleteAll() {
+    todos = []
   }
 
   func toggleComplete(_ id: UUID) {

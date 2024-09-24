@@ -23,7 +23,7 @@ struct AboutView: View {
 
       Text("Use the **Edit Todos…** menu item to add, delete and edit your todos. Select them in the menu to mark them as complete or incomplete.")
 
-      Text("There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in.")
+      Text("There are only three settings: **Show Completed** lets you choose how to display, hide or delete the completed todos, **Sort Todos** allows you to sort the todos by the creation date & time or by title, and **Launch on Login** sets whether you want the app to start automatically.")
 
       Text("Translation and VoiceOver help by [Sebastian Dellit](www.blindzeln.org).")
 

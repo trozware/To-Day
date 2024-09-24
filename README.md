@@ -6,7 +6,7 @@ Every app I found had a terrific list of features, most of which I didn't want, 
 
 Use the **Edit Todos…** menu item to add, delete, edit and move your todos. Select them in the menu to mark them as complete or incomplete.
 
-There are only two settings: **Show Completed** lets you choose how to display, hide or delete the completed todos and **Launch on Login** sets whether you want the app to start automatically when you log in.
+There are only three settings: **Show Completed** lets you choose how to display, hide or delete the completed todos, **Sort Todos** allows you to sort the todos by the creation date & time or by title, and **Launch on Login** sets whether you want the app to start automatically when you log in.
 
 This app is free, but if you'd like to support my work, please [Buy Me a Coffee](https://ko-fi.com/H2H3BU7SI).
 
@@ -23,7 +23,9 @@ If you'd like to contact me, I'm [@troz@mastodon.social](https://mastodon.social
 - [ ] VoiceOver - not yet possible to set VocieOver text in menus
 - [x] More completion options
 - [x] German localisation
+- [x] Allow sorting by title
 - [ ] More Localisations
+- [x] Option-click on Delete All to delete without confirmation
 
 ## Sparkle process
 
