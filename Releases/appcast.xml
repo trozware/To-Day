@@ -8,11 +8,13 @@
             <sparkle:version>21</sparkle:version>
             <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
             <h2>What's New</h2>
             <ul>
                 <li>Sort todos by title or date & time.</li>
                 <li>Hold down Option when editing to delete all without confirmation.</li>
             </ul>
+            ]]></description>
             <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="13202769" type="application/octet-stream" sparkle:edSignature="2P8iNy45k1DrrBZuijQFw8ncq4fu9i6QfNMX73GOvsCmJRclT5hE0SJP8FFqgUkCdRPSNJc5t/gDF8ebH2peCg=="/>
         </item>
         <item>
@@ -21,11 +23,13 @@
             <sparkle:version>18</sparkle:version>
             <sparkle:shortVersionString>1.9.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
             <h2>What's New</h2>
             <ul>
                 <li>VoiceOver improvements.</li>
                 <li>German localisation by Sebastian Dellit: www.blindzeln.org</li>
             </ul>
+            ]]></description>
             <enclosure url="https://raw.githubusercontent.com/trozware/To-Day/main/Releases/To-Day.dmg" length="13120849" type="application/octet-stream" sparkle:edSignature="R6o8lOvjcyduL51vYDsazIcYAwMyTWzwnH+Nr3MdXeCoX46Ce+RwFZNSGuiOvk3kdPUHNgZASQUiR02srmuvAw=="/>
         </item>
         <item>
