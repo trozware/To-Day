@@ -88,23 +88,21 @@
       }
     },
     "By Date & Time" : {
-      "comment" : "Using Translate app",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nach Datum und Uhrzeit"
+            "value" : "Nach Datum und Zeit"
           }
         }
       }
     },
     "By Title" : {
-      "comment" : "Using Translate app",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nach Titel"
+            "value" : "Nach Name"
           }
         }
       }
@@ -250,12 +248,11 @@
       }
     },
     "Hold down Option to delete all without confirmation." : {
-      "comment" : "Using Translate app",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Halten Sie die Option gedrückt, um alle ohne Bestätigung zu löschen."
+            "value" : "Halte die Optionstaste gedrückt, um alles ohne Bestätigung zu löschen."
           }
         }
       }
@@ -361,7 +358,6 @@
       }
     },
     "Sort Todos" : {
-      "comment" : "Using Translate app",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -382,12 +378,11 @@
       }
     },
     "There are only three settings: **Show Completed** lets you choose how to display, hide or delete the completed todos, **Sort Todos** allows you to sort the todos by the creation date & time or by title, and **Launch on Login** sets whether you want the app to start automatically." : {
-      "comment" : "Using Translate app",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es gibt nur drei Einstellungen: Mit **Abgeschlossene anzeigen** kannst du auswählen, wie die abgeschlossenen Aufgaben angezeigt, ausgeblendet oder gelöscht werden sollen, **Einträge sortieren** ermöglicht es Ihnen, die Aufgaben nach Erstellungsdatum und -zeit oder nach Titel zu sortieren, uund mit **Bei Anmeldung starten** legst du fest, ob die App automatisch gestartet werden soll, wenn du dich anmeldest."
+            "value" : "Es gibt nur drei Einstellungen: Mit **Abgeschlossene anzeigen** kannst du auswählen, wie die abgeschlossenen Aufgaben angezeigt, ausgeblendet oder gelöscht werden sollen. Mit **Einträge sortieren** kannst du die Aufgaben nach Datum und Zeit oder nach Namen sortieren. Und mit **Bei Anmeldung starten** legst du fest, ob die App automatisch gestartet werden soll, wenn du dich anmeldest."
           }
         }
       }
